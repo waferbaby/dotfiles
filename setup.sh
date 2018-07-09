@@ -1,17 +1,10 @@
 #!/usr/bin/env sh
 
-# Prepare the directories.
-
-mkdir -p ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
-
 # Symlink all the things.
 
 ln -sf ~/.dotfiles/.config ~/
 ln -sf ~/.dotfiles/.gitconfig ~/.gitconfig
 ln -sf ~/.dotfiles/.gitignore_global ~/
-ln -sf ~/.dotfiles/.sublime ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User
-ln -sf ~/.dotfiles/.vimrc ~/
-ln -sf ~/.dotfiles/.vim ~/
 
 # Install homebrew.
 
@@ -21,7 +14,9 @@ ln -sf ~/.dotfiles/.vim ~/
 
 brew install fish
 brew install mas
+brew install neovim
 brew install rbenv
+brew install tmux
 
 # Install fonts.
 
@@ -32,21 +27,13 @@ brew cask install font-mononoki
 
 brew cask install 1password
 brew cask install appcleaner
-brew cask install battle-net
-brew cask install coconutbattery
-brew cask install day-o
-brew cask install discord
 brew cask install gimp
 brew cask install iterm2
 brew cask install keepingyouawake
 brew cask install launchbar
 brew cask install monolingual
 brew cask install moom
-brew cask install resilio-sync
 brew cask install slack
-brew cask install steam
-brew cask install sublime-text
-brew cask install superduper
 brew cask install the-unarchiver
 
 mas lucky tweetbot
