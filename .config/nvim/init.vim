@@ -7,7 +7,6 @@ set shiftwidth=2
 set tabstop=2
 set shell=/bin/bash
 
-set termguicolors
 set nocompatible
 set expandtab
 set nowrap
@@ -19,7 +18,10 @@ set smartcase
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/fzf'
+Plug 'SidOfc/mkdx'
+Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 
 call plug#end()
