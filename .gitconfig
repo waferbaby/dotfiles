@@ -25,13 +25,13 @@
   untracked = cyan
 
 [core]
-  editor = /usr/local/bin/subl -w
+  editor = /usr/local/bin/nvim
   excludesfile = ~/.gitignore_global
   pager = less -r
 
 [user]
   name = Daniel Bogan
   email = d@waferbaby.com
-	signingkey = 648B78A1
+  signingkey = 648B78A1
 [push]
   default = simple
