@@ -1,5 +1,10 @@
 syntax enable
 
+let g:netrw_banner = 0
+let g:netrw_keepdir = 0
+let g:netrw_liststyle = 3
+let g:netrw_sort_options = 'i'
+
 let g:airline_theme = 'monochrome'
 
 set encoding=utf8
@@ -8,7 +13,6 @@ set tabstop=2
 set shell=/bin/bash
 
 set expandtab
-set nowrap
 set ignorecase
 set smartcase
 
@@ -25,4 +29,3 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
-
