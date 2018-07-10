@@ -1,4 +1,3 @@
-
 syntax enable
 
 set encoding=utf8
@@ -19,5 +18,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf'
 Plug 'SidOfc/mkdx'
 Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
