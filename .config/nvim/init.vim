@@ -1,4 +1,3 @@
-filetype plugin indent on
 
 syntax enable
 
@@ -9,8 +8,6 @@ set shell=/bin/bash
 
 set expandtab
 set nowrap
-set hlsearch
-set incsearch
 set ignorecase
 set smartcase
 
