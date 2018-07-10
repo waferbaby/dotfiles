@@ -11,7 +11,7 @@ set nowrap
 set ignorecase
 set smartcase
 
-map <C-p> :FZF<CR>
+map <M-p> :FZF<CR>
 
 call plug#begin('~/.vim/plugged')
 
