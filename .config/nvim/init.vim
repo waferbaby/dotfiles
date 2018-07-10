@@ -20,7 +20,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf'
 Plug 'SidOfc/mkdx'
-Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 
 call plug#end()
