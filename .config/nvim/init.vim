@@ -18,7 +18,6 @@ set smartcase
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/fzf'
 Plug 'SidOfc/mkdx'
 Plug 'scrooloose/nerdtree'
