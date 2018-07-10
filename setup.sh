@@ -5,6 +5,7 @@
 ln -sf ~/.dotfiles/.config ~/
 ln -sf ~/.dotfiles/.gitconfig ~/.gitconfig
 ln -sf ~/.dotfiles/.gitignore_global ~/
+ln -sf ~/.dotfiles/.tmux.conf ~/
 
 # Install homebrew.
 
