@@ -1,5 +1,7 @@
 syntax enable
 
+let g:ack_autoclose = 1
+let g:ackhighlight = 1
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
 let g:airline_theme = 'monochrome'
@@ -25,6 +27,7 @@ set ignorecase
 set smartcase
 set number
 
+map <M-f> :Ack
 map <M-p> :FZF<CR>
 map <M-Space> :NERDTreeToggle<CR>
 
