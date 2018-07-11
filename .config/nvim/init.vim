@@ -27,7 +27,7 @@ set ignorecase
 set smartcase
 set number
 
-map <M-f> :Ack
+map <M-f> :Ack 
 map <M-p> :FZF<CR>
 map <M-Space> :NERDTreeToggle<CR>
 
