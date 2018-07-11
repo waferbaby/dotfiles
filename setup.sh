@@ -13,10 +13,12 @@ ln -sf ~/.dotfiles/.tmux.conf ~/
 
 # Install command line tools.
 
+brew install ack
 brew install fish
 brew install mas
 brew install neovim
 brew install rbenv
+brew install the_silver_searcher
 brew install tmux
 
 # Install fonts.
