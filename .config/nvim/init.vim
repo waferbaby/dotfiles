@@ -1,5 +1,7 @@
 syntax enable
 
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
 let g:airline_theme = 'monochrome'
 
 let g:NERDTreeMinimalUI = 1
@@ -30,6 +32,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf'
+Plug 'mileszs/ack.vim'
 Plug 'SidOfc/mkdx'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
