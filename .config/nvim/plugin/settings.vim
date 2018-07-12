@@ -5,5 +5,6 @@ set shell=/bin/bash
 
 set expandtab
 set ignorecase
-set smartcase
 set number
+set noshowmode
+set smartcase
