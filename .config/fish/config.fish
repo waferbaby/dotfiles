@@ -8,3 +8,9 @@ set -g fish_user_paths "$HOME/.rbenv/shims" "/usr/local/bin" "/usr/local/sbin" $
 set -x EDITOR /usr/local/bin/nvim
 
 rbenv rehash >/dev/null ^&1
+
+if test -d ~/.config/fish/configs
+  for config_file in ~/.config/fish/configs/*
+    source $config_file
+  end
+end
