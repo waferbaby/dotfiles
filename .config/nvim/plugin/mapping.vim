@@ -1,5 +1,5 @@
-map <M-f> :Ack
+map <M-f> :Ack<Space>
 map <M-p> :FZF<CR>
 map <M-Space> :NERDTreeToggle<CR>
-map <M-[> :bp<CR>
-map <M-]> :bn<CR>
+map <M-[> :wincmd h<CR>
+map <M-]> :wincmd l<CR>
