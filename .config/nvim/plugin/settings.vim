@@ -5,6 +5,7 @@ set shiftwidth=2
 set tabstop=2
 set shell=/bin/bash
 
+set autoread
 set expandtab
 set ignorecase
 set number
