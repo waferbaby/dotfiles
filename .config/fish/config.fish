@@ -7,7 +7,7 @@ set fish_greeting
 set -g fish_user_paths "$HOME/.rbenv/shims" "/usr/local/bin" "/usr/local/sbin" $fish_user_paths
 set -x EDITOR /usr/local/bin/nvim
 
-rbenv rehash >/dev/null ^&1
+status --is-interactive; and source (rbenv init -|psub)
 
 if test -d ~/.config/fish/configs
   for config_file in ~/.config/fish/configs/*
