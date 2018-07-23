@@ -1,4 +1,2 @@
-setlocal nonumber
-
 PencilSoft
 Goyo
