@@ -8,6 +8,5 @@ set shell=/bin/bash
 set autoread
 set expandtab
 set ignorecase
-set number
 set noshowmode
 set smartcase
