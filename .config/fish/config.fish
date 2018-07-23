@@ -5,7 +5,10 @@ end
 set fish_greeting
 
 set -Ux fish_user_paths $HOME/.rbenv/bin $fish_user_paths
+
 set -x EDITOR /usr/local/bin/nvim
+set -x FZF_DEFAULT_COMMAND "rg --files --hidden --glob '!.git/*'"
+set -x FZF_DEFAULT_OPTS "--reverse"
 
 status --is-interactive; and source (rbenv init -|psub)
 
