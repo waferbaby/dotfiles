@@ -18,7 +18,7 @@ brew install fish
 brew install mas
 brew install neovim
 brew install rbenv
-brew install the_silver_searcher
+brew install ripgrep
 brew install tmux
 
 # Install fonts.
