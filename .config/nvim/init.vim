@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
+Plug 'bling/vim-bufferline'
 Plug 'junegunn/fzf'
 Plug 'junegunn/goyo.vim'
 Plug 'mileszs/ack.vim'
