@@ -14,6 +14,27 @@ set noshowmode
 set number
 set smartcase
 
+hi LineNr ctermfg=242
+hi StatusLine cterm=bold
+hi StatusLineNC cterm=bold ctermfg=245
+
+nnoremap <M-f> :Ack<Space>
+nnoremap <M-p> :FZF<CR>
+nnoremap <M-[> :bp<CR>
+nnoremap <M-]> :bn<CR>
+
+augroup fzf 
+  autocmd!
+  autocmd FileType fzf
+  autocmd FileType fzf set laststatus=0 noshowmode noruler | autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+augroup end
+
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,md call pencil#init()
+  autocmd FileType text        call pencil#init()
+augroup end 
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
