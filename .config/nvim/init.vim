@@ -1,3 +1,19 @@
+let loaded_netrwPlugin = 1
+
+set encoding=utf8
+set shiftwidth=2
+set tabstop=2
+set shell=/bin/bash
+
+set autochdir
+set autoread
+set autowriteall
+set expandtab
+set ignorecase
+set noshowmode
+set number
+set smartcase
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
