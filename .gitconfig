@@ -33,5 +33,9 @@
   name = Daniel Bogan
   email = d@waferbaby.com
   signingkey = 648B78A1
+
 [push]
   default = simple
+
+[commit]
+	verbose = true
