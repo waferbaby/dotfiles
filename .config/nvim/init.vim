@@ -7,7 +7,6 @@ set tabstop=2
 set shell=/bin/bash
 set shortmess+=I
 
-set autochdir
 set autoread
 set autowriteall
 set expandtab
@@ -25,6 +24,8 @@ nnoremap <M-p> :FZF<CR>
 nnoremap <M-[> :bp<CR>
 nnoremap <M-]> :bn<CR>
 nnoremap <M-/> :%!sort -R<CR>
+
+autocmd BufEnter * silent! lcd %:p:h
 
 augroup fzf 
   autocmd!
