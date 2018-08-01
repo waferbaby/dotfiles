@@ -5,6 +5,7 @@ set encoding=utf8
 set shiftwidth=2
 set tabstop=2
 set shell=/bin/bash
+set shortmess+=I
 
 set autochdir
 set autoread
