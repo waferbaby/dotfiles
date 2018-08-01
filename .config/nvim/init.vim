@@ -22,10 +22,10 @@ nnoremap <M-f> :Ack<Space>
 nnoremap <M-p> :FZF<CR>
 nnoremap <M-[> :bp<CR>
 nnoremap <M-]> :bn<CR>
+nnoremap <M-/> :%!sort -R<CR>
 
 augroup fzf 
   autocmd!
-  autocmd FileType fzf
   autocmd FileType fzf set laststatus=0 noshowmode noruler | autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 augroup end
 
