@@ -7,7 +7,6 @@ set tabstop=2
 set shell=/bin/bash
 set shortmess+=I
 
-set autochdir
 set autoread
 set autowriteall
 set expandtab
