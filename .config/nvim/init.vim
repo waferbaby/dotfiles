@@ -38,6 +38,11 @@ augroup pencil
   autocmd FileType text        call pencil#init()
 augroup end 
 
+augroup usesthis
+  autocmd!
+  autocmd BufWriteCmd *.markdown w | silent! exec '!~/Development/usesthis/tasks/link_gear %:p' | e
+augroup end
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
