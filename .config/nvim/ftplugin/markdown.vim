@@ -1,2 +1,0 @@
-PencilSoft
-Goyo
