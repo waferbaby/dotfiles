@@ -25,7 +25,7 @@ nnoremap <M-[> :bp<CR>
 nnoremap <M-]> :bn<CR>
 nnoremap <M-/> :%!sort -R<CR>
 
-autocmd BufEnter * silent! lcd %:p:h
+autocmd VimEnter * silent! lcd %:p:h
 
 augroup fzf 
   autocmd!
