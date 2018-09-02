@@ -30,7 +30,6 @@ brew cask install font-mononoki
 
 brew cask install 1password
 brew cask install appcleaner
-brew cask install gimp
 brew cask install iterm2
 brew cask install keepingyouawake
 brew cask install launchbar
@@ -39,7 +38,6 @@ brew cask install moom
 brew cask install slack
 brew cask install the-unarchiver
 
-mas lucky tweetbot
 mas lucky reeder
 
 # Switch shells.
