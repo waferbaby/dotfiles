@@ -17,7 +17,9 @@ set smartcase
 
 hi IncSearch cterm=underline ctermfg=255 ctermbg=238
 hi LineNr ctermfg=242
+hi MatchParen cterm=underline ctermfg=255 ctermbg=238
 hi Search cterm=underline ctermfg=255 ctermbg=238
+hi SpellCap cterm=bold ctermfg=255 ctermbg=56
 hi StatusLine cterm=bold
 hi StatusLineNC cterm=bold ctermfg=245
 
@@ -57,5 +59,6 @@ Plug 'reedes/vim-pencil'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'w0rp/ale'
 
 call plug#end()
