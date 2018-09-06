@@ -15,10 +15,12 @@ set noshowmode
 set number
 set smartcase
 
+hi Error cterm=bold ctermfg=255 ctermbg=9
 hi IncSearch cterm=underline ctermfg=255 ctermbg=238
 hi LineNr ctermfg=242
 hi MatchParen cterm=underline ctermfg=255 ctermbg=238
 hi Search cterm=underline ctermfg=255 ctermbg=238
+hi SpellBad cterm=bold ctermfg=255 ctermbg=9
 hi SpellCap cterm=bold ctermfg=255 ctermbg=56
 hi StatusLine cterm=bold
 hi StatusLineNC cterm=bold ctermfg=245
