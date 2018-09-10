@@ -1,6 +1,7 @@
 let loaded_netrwPlugin = 1
 
 set clipboard=unnamed
+set conceallevel=0
 set encoding=utf8
 set shiftwidth=2
 set tabstop=2
