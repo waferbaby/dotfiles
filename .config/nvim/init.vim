@@ -53,6 +53,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-bufferline'
+Plug 'ervandew/supertab'
 Plug 'junegunn/fzf'
 Plug 'junegunn/goyo.vim'
 Plug 'mileszs/ack.vim'
