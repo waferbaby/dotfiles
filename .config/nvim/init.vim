@@ -1,5 +1,4 @@
 let loaded_netrwPlugin = 1
-let g:pad#dir = "~/Documents/Notes"
 
 set clipboard=unnamed
 set conceallevel=0
@@ -56,7 +55,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-bufferline'
 Plug 'ervandew/supertab'
-Plug 'fmoralesc/vim-pad'
 Plug 'junegunn/fzf'
 Plug 'junegunn/goyo.vim'
 Plug 'mileszs/ack.vim'
