@@ -1,7 +1,14 @@
+let g:notes_conceal_bold = 0
+let g:notes_conceal_code = 0
+let g:notes_conceal_italic = 0
+let g:notes_conceal_url = 0
+let g:notes_directories = ['~/Documents/Notes']
+let g:notes_smart_quotes = 0
+let g:notes_suffix = '.txt'
 let loaded_netrwPlugin = 1
 
 set clipboard=unnamed
-set conceallevel=0
+set cole=0
 set encoding=utf8
 set shiftwidth=2
 set tabstop=2
@@ -42,7 +49,6 @@ augroup end
 augroup pencil
   autocmd!
   autocmd FileType markdown,md call pencil#init()
-  autocmd FileType text        call pencil#init()
 augroup end 
 
 augroup usesthis
@@ -64,5 +70,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-notes'
 
 call plug#end()
