@@ -1,6 +1,3 @@
-let g:pad#dir = "~/Documents/Notes"
-let g:pad#open_in_split = "0"
-
 let loaded_netrwPlugin = 1
 
 set clipboard=unnamed
@@ -30,7 +27,6 @@ hi StatusLine cterm=bold
 hi StatusLineNC cterm=bold ctermfg=245
 
 nnoremap <M-f> :Ack<Space>
-nnoremap <M-l> :Pad ls<CR>
 nnoremap <M-p> :FZF<CR>
 nnoremap <M-[> :bp<CR>
 nnoremap <M-]> :bn<CR>
@@ -56,11 +52,9 @@ augroup end
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'aaronbieber/vim-quicktask'
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-bufferline'
 Plug 'ervandew/supertab'
-Plug 'fmoralesc/vim-pad'
 Plug 'junegunn/fzf'
 Plug 'junegunn/goyo.vim'
 Plug 'mileszs/ack.vim'
