@@ -1,3 +1,3 @@
 function notes 
-  nvim +":Pad ls" ~/Documents/Notes
+  nvim +":FZF ~/Documents/Notes"
 end
