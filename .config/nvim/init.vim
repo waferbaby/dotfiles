@@ -1,5 +1,7 @@
-let loaded_netrwPlugin = 1
 let g:pad#dir = "~/Documents/Notes"
+let g:pad#open_in_split = "0"
+
+let loaded_netrwPlugin = 1
 
 set clipboard=unnamed
 set conceallevel=0
