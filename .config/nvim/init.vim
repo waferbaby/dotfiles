@@ -30,6 +30,7 @@ hi StatusLine cterm=bold
 hi StatusLineNC cterm=bold ctermfg=245
 
 nnoremap <M-f> :Ack<Space>
+nnoremap <M-l> :Pad ls<CR>
 nnoremap <M-p> :FZF<CR>
 nnoremap <M-[> :bp<CR>
 nnoremap <M-]> :bn<CR>
