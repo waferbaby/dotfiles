@@ -55,6 +55,7 @@ augroup end
 
 call plug#begin('~/.vim/plugged')
 
+Plug 'aaronbieber/vim-quicktask'
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-bufferline'
 Plug 'ervandew/supertab'
