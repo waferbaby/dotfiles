@@ -20,6 +20,7 @@ set autowriteall
 set expandtab
 set ignorecase
 set noshowmode
+set nofoldenable
 set number
 set smartcase
 
