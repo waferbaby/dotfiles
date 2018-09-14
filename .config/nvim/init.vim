@@ -34,9 +34,9 @@ hi SpellCap cterm=bold ctermfg=255 ctermbg=56
 hi StatusLine cterm=bold
 hi StatusLineNC cterm=bold ctermfg=245
 
-nnoremap <M-f> :Ack<Space>
+nnoremap <M-f> :Rg<CR>
 nnoremap <M-j> vipJ
-nnoremap <M-p> :FZF<CR>
+nnoremap <M-p> :Files<CR>
 nnoremap <M-[> :bp<CR>
 nnoremap <M-]> :bn<CR>
 nnoremap <M-/> :%!sort -R<CR>
