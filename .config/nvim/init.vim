@@ -1,3 +1,4 @@
+let g:ackprg = 'rg --vimgrep --no-heading'
 let g:notes_conceal_bold = 0
 let g:notes_conceal_code = 0
 let g:notes_conceal_italic = 0
@@ -63,7 +64,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-bufferline'
 Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 Plug 'raimondi/delimitmate'
 Plug 'reedes/vim-pencil'
