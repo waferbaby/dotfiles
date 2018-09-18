@@ -1,6 +1,6 @@
 function notes 
   set source_directory $PWD
   cd ~/Documents/Notes
-  nvim +":Files"
+  nvim +":FZF"
   cd $source_directory
 end
