@@ -46,7 +46,7 @@ nnoremap <Leader>[ :bp<CR>
 nnoremap <leader>] :bn<CR>
 nnoremap <leader>/ :%!sort -R<CR>
 
-autocmd VimEnter * silent! lcd %:p:h
+autocmd VimEnter * silent! lcd $PWD
 
 augroup fzf 
   autocmd!
