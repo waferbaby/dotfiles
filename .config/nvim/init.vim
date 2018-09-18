@@ -1,3 +1,4 @@
+let g:ackprg = 'rg --vimgrep --no-heading'
 let g:notes_conceal_bold = 0
 let g:notes_conceal_code = 0
 let g:notes_conceal_italic = 0
@@ -5,7 +6,11 @@ let g:notes_conceal_url = 0
 let g:notes_directories = ['~/Documents/Notes']
 let g:notes_smart_quotes = 0
 let g:notes_suffix = '.txt'
+
 let loaded_netrwPlugin = 1
+
+nnoremap <space> <nop>
+map <space> <leader>
 
 set clipboard=unnamed
 set cole=0
@@ -34,12 +39,12 @@ hi SpellCap cterm=bold ctermfg=255 ctermbg=56
 hi StatusLine cterm=bold
 hi StatusLineNC cterm=bold ctermfg=245
 
-nnoremap <M-f> :Rg<CR>
-nnoremap <M-j> vipJ
-nnoremap <M-p> :Files<CR>
-nnoremap <M-[> :bp<CR>
-nnoremap <M-]> :bn<CR>
-nnoremap <M-/> :%!sort -R<CR>
+nnoremap <leader>f :Ack<Space>
+nnoremap <leader>j vipJ
+nnoremap <leader>p :FZF<CR>
+nnoremap <Leader>[ :bp<CR>
+nnoremap <leader>] :bn<CR>
+nnoremap <leader>/ :%!sort -R<CR>
 
 autocmd VimEnter * silent! lcd %:p:h
 
@@ -63,7 +68,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-bufferline'
 Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 Plug 'raimondi/delimitmate'
 Plug 'reedes/vim-pencil'
