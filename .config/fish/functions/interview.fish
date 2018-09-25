@@ -8,6 +8,5 @@ function interview
   sed '3d' $upcoming_file > $temp_file
   mv $temp_file $upcoming_file
 
-  echo $next_interviewee
   ./tasks/interview $next_interviewee
 end
