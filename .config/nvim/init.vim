@@ -1,3 +1,5 @@
+let g:ack_autoclose = 1
+let g:ackhighlight = 1
 let g:ackprg = 'rg --vimgrep --no-heading'
 let g:notes_conceal_bold = 0
 let g:notes_conceal_code = 0
@@ -53,11 +55,6 @@ augroup fzf
   autocmd FileType fzf set laststatus=0 noshowmode noruler | autocmd BufLeave <buffer> set laststatus=2 showmode ruler
 augroup end
 
-augroup pencil
-  autocmd!
-  autocmd FileType markdown,md call pencil#init()
-augroup end 
-
 augroup usesthis
   autocmd!
   autocmd BufWriteCmd *.markdown w | silent! exec '!~/Development/usesthis/tasks/link_gear %:p' | silent! %s/’/'/g | silent! %s/[“”]/"/g | e
@@ -67,10 +64,10 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-bufferline'
+Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'junegunn/fzf'
 Plug 'mileszs/ack.vim'
 Plug 'raimondi/delimitmate'
-Plug 'reedes/vim-pencil'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
