@@ -43,7 +43,7 @@ hi StatusLineNC cterm=bold ctermfg=245
 
 nnoremap <leader>f :Ack<Space>
 nnoremap <leader>j vipJ
-nnoremap <leader>p :FZF<CR>
+nnoremap <leader>t :FZF<CR>
 nnoremap <Leader>[ :bp<CR>
 nnoremap <leader>] :bn<CR>
 nnoremap <leader>/ :%!sort -R<CR>
