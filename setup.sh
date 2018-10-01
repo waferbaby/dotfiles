@@ -13,7 +13,6 @@ ln -sf ~/.dotfiles/.tmux.conf ~/
 
 # Install command line tools.
 
-brew install ack
 brew install fish
 brew install mas
 brew install neovim
@@ -33,7 +32,6 @@ brew cask install appcleaner
 brew cask install iterm2
 brew cask install keepingyouawake
 brew cask install launchbar
-brew cask install monolingual
 brew cask install moom
 brew cask install slack
 brew cask install the-unarchiver
@@ -46,7 +44,6 @@ sudo chsh -s /usr/local/bin/fish $USER
 
 # Set some nice defaults.
 
-defaults write NSGlobalDomain AppleInterfaceStyle 'Dark'
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 defaults write NSGlobalDomain AppleShowAllExtensions -int 1
 defaults write NSGlobalDomain KeyRepeat -int 0
