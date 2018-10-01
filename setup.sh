@@ -24,7 +24,7 @@ brew install tmux
 # Install fonts.
 
 brew tap caskroom/fonts
-brew cask install font-mononoki
+brew cask install font-fira-code
 
 # Install Mac apps.
 
