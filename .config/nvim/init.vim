@@ -64,7 +64,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-bufferline'
-Plug 'JamshedVesuna/vim-markdown-preview'
 Plug 'junegunn/fzf'
 Plug 'mileszs/ack.vim'
 Plug 'raimondi/delimitmate'
