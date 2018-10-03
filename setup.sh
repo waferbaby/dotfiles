@@ -29,6 +29,7 @@ brew cask install font-fira-code
 
 brew cask install 1password
 brew cask install appcleaner
+brew cask install discord
 brew cask install iterm2
 brew cask install keepingyouawake
 brew cask install launchbar
