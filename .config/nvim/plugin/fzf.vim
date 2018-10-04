@@ -1,1 +1,1 @@
-let g:fzf_layout = { 'window': 'enew' }
+let g:fzf_layout = { 'down': '~40%' }
