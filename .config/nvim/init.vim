@@ -17,19 +17,22 @@ map <space> <leader>
 set clipboard=unnamed
 set cole=0
 set encoding=utf8
-set shiftwidth=2
-set tabstop=2
 set shell=/bin/bash
+set shiftwidth=2
 set shortmess+=I
+set tabstop=2
 
 set autoread
 set autowriteall
 set expandtab
 set ignorecase
-set noshowmode
+set incsearch
 set nofoldenable
+set nohlsearch
+set noshowmode
 set number
 set smartcase
+set smarttab
 
 hi Error cterm=bold ctermfg=255 ctermbg=9
 hi IncSearch cterm=underline ctermfg=255 ctermbg=238
@@ -41,12 +44,14 @@ hi SpellCap cterm=bold ctermfg=255 ctermbg=56
 hi StatusLine cterm=bold
 hi StatusLineNC cterm=bold ctermfg=245
 
+nnoremap <Leader>[ :bp<CR>
+nnoremap <leader>/ :%!sort -R<CR>
+nnoremap <leader>] :bn<CR>
 nnoremap <leader>f :Ack<Space>
 nnoremap <leader>j vipJ
+nnoremap <leader>s :source $MYVIMRC<CR>
 nnoremap <leader>t :FZF<CR>
-nnoremap <Leader>[ :bp<CR>
-nnoremap <leader>] :bn<CR>
-nnoremap <leader>/ :%!sort -R<CR>
+nnoremap <leader>v :edit $MYVIMRC<CR>
 
 autocmd VimEnter * silent! lcd $PWD
 
