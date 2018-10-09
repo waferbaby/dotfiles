@@ -1,6 +1,10 @@
 let g:ack_autoclose = 1
 let g:ackhighlight = 1
 let g:ackprg = 'rg --vimgrep --no-heading'
+let g:airline_theme = 'monochrome'
+let g:airline#extensions#bufferline#overwrite_variables=0
+let g:bufferline_echo = 0
+let g:fzf_layout = { 'down': '~60%' }
 let g:notes_conceal_bold = 0
 let g:notes_conceal_code = 0
 let g:notes_conceal_italic = 0
