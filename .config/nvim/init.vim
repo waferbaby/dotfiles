@@ -70,7 +70,8 @@ augroup usesthis
 augroup end
 
 augroup nolines
-    autocmd BufNew,BufNewFile,BufRead *.txt,*.md,*.markdown :set nonu
+  autocmd!
+  autocmd BufNew,BufNewFile,BufRead *.txt,*.md,*.markdown :set nonu
 augroup END
 
 call plug#begin('~/.vim/plugged')
