@@ -69,6 +69,10 @@ augroup usesthis
   autocmd BufWriteCmd *.markdown w | silent! exec '!~/Development/usesthis/tasks/link_gear %:p' | silent! %s/’/'/g | silent! %s/[“”]/"/g | e
 augroup end
 
+augroup nolines
+    autocmd BufNew,BufNewFile,BufRead *.txt,*.md,*.markdown :set nonu
+augroup END
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
