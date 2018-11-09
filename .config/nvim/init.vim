@@ -5,13 +5,6 @@ let g:airline_theme = 'monochrome'
 let g:airline#extensions#bufferline#overwrite_variables=0
 let g:bufferline_echo = 0
 let g:fzf_layout = { 'down': '~60%' }
-let g:notes_conceal_bold = 0
-let g:notes_conceal_code = 0
-let g:notes_conceal_italic = 0
-let g:notes_conceal_url = 0
-let g:notes_directories = ['~/Documents/Notes']
-let g:notes_smart_quotes = 0
-let g:notes_suffix = '.txt'
 
 let loaded_netrwPlugin = 1
 
@@ -85,7 +78,5 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
-Plug 'xolox/vim-misc'
-Plug 'xolox/vim-notes'
 
 call plug#end()
