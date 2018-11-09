@@ -3,10 +3,12 @@ function interview
 
   set upcoming_file ~/Documents/Notes/Projects/Uses\ This/Upcoming.txt
   set temp_file /tmp/usesthis-upcoming-(date "+%Y-%m-%d").txt
-  set next_interviewee (sed -n '3p' $upcoming_file)
+  set next_interviewee (sed -n '1p' $upcoming_file)
   
-  sed '3d' $upcoming_file > $temp_file
+  sed '1d' $upcoming_file > $temp_file
   mv $temp_file $upcoming_file
 
-  ./tasks/interview $next_interviewee
+  echo "Interviewing $next_interviewee..."
+
+  ./tasks/interview "$next_interviewee"
 end
