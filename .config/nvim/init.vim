@@ -67,7 +67,7 @@ augroup nolines
   autocmd BufNew,BufNewFile,BufRead *.txt,*.md,*.markdown :set nonu
 augroup END
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-bufferline'
