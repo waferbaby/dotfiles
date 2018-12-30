@@ -2,7 +2,12 @@
 
 # Symlink all the things.
 
-ln -sf ~/.dotfiles/.config ~/
+mkdir -p ~/.config/
+
+ln -sf ~/.dotfiles/fish/ ~/.config/
+ln -sf ~/.dotfiles/nvim/ ~/.config/
+ln -sf ~/.dotfiles/parker/ ~/.config/
+
 ln -sf ~/.dotfiles/.gitconfig ~/.gitconfig
 ln -sf ~/.dotfiles/.gitignore_global ~/
 ln -sf ~/.dotfiles/.tmux.conf ~/
@@ -33,7 +38,6 @@ brew cask install iterm2
 brew cask install keepingyouawake
 brew cask install launchbar
 brew cask install moom
-brew cask install slack
 brew cask install the-unarchiver
 
 mas lucky reeder
