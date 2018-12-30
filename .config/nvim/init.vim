@@ -52,6 +52,8 @@ nnoremap <leader>v :edit $MYVIMRC<CR>
 
 autocmd VimEnter * silent! lcd $PWD
 
+au BufNewFile,BufFilePre,BufRead *.txt set filetype=markdown
+
 augroup fzf 
   autocmd!
   autocmd FileType fzf set laststatus=0 noshowmode noruler | autocmd BufLeave <buffer> set laststatus=2 showmode ruler
