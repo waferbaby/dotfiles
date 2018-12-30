@@ -1,3 +1,4 @@
 .config/gtk-2.0/
 .config/fish/fishd*
+.config/nvim/plugged
 .vim/
