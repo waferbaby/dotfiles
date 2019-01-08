@@ -1,4 +1,3 @@
-let g:ack_autoclose = 1
 let g:ackhighlight = 1
 let g:ackprg = 'rg --vimgrep --no-heading'
 let g:airline_theme = 'monochrome'
@@ -41,7 +40,7 @@ hi SpellCap cterm=bold ctermfg=255 ctermbg=56
 hi StatusLine cterm=bold
 hi StatusLineNC cterm=bold ctermfg=245
 
-nnoremap <Leader>[ :bp<CR>
+nnoremap <leader>[ :bp<CR>
 nnoremap <leader>/ :%!sort -R<CR>
 nnoremap <leader>] :bn<CR>
 nnoremap <leader>f :Ack<Space>
@@ -49,6 +48,8 @@ nnoremap <leader>j vipJ
 nnoremap <leader>s :source $MYVIMRC<CR>
 nnoremap <leader>t :FZF<CR>
 nnoremap <leader>v :edit $MYVIMRC<CR>
+nnoremap <leader><Up> <C-W>k
+nnoremap <leader><Down> <C-W>j
 
 autocmd VimEnter * silent! lcd $PWD
 autocmd FileType crontab setlocal nobackup nowritebackup
