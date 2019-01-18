@@ -8,7 +8,8 @@ ln -sf ~/.dotfiles/fish/ ~/.config/
 ln -sf ~/.dotfiles/nvim/ ~/.config/
 ln -sf ~/.dotfiles/parker/ ~/.config/
 
-ln -sf ~/.dotfiles/.gitconfig ~/.gitconfig
+ln -sf ~/.dotfiles/.ctags ~/
+ln -sf ~/.dotfiles/.gitconfig ~/
 ln -sf ~/.dotfiles/.gitignore_global ~/
 ln -sf ~/.dotfiles/.tmux.conf ~/
 
