@@ -1,0 +1,5 @@
+--exclude=*.js
+--exclude=.bundle
+--exclude=.git
+--exclude=log
+--exclude=tmp
