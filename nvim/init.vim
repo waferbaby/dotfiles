@@ -52,7 +52,7 @@ nnoremap <leader>v :edit $MYVIMRC<CR>
 nnoremap <leader><Up> <C-W>k
 nnoremap <leader><Down> <C-W>j
 
-autocmd VimEnter * silent! lcd $PWD
+autocmd VimEnter * silent! cd %:p:h
 autocmd FileType crontab setlocal nobackup nowritebackup
 autocmd BufNewFile,BufFilePre,BufRead *.txt set filetype=markdown
 
