@@ -48,11 +48,9 @@ nnoremap <leader>[ :bp<CR>
 nnoremap <leader>] :bn<CR>
 nnoremap <leader>f :Ack<Space>
 nnoremap <leader>j vipJ
-nnoremap <leader>l viwc[]<Esc>hpeli[]<Esc>i
 nnoremap <leader>s :source $MYVIMRC<CR>
 nnoremap <leader>t :FZF<CR>
 nnoremap <leader>v :edit $MYVIMRC<CR>
-vnoremap <leader>l xi[]<Esc>hpeli[]<Esc>i
 
 autocmd VimEnter * silent! cd %:p:h
 autocmd FileType crontab setlocal nobackup nowritebackup
@@ -61,6 +59,12 @@ autocmd BufNewFile,BufFilePre,BufRead *.txt set filetype=markdown
 augroup fzf 
   autocmd!
   autocmd FileType fzf set laststatus=0 noshowmode noruler | autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+augroup end
+
+augroup markdown
+  autocmd!
+  autocmd FileType markdown nnoremap <leader>l viwc[]<Esc>hpeli[]<Esc>i
+  autocmd FileType markdown vnoremap <leader>l xi[]<Esc>hpeli[]<Esc>i
 augroup end
 
 augroup usesthis
