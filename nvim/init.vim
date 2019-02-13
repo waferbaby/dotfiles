@@ -41,8 +41,10 @@ hi SpellCap cterm=bold ctermfg=255 ctermbg=56
 hi StatusLine cterm=bold
 hi StatusLineNC cterm=bold ctermfg=245
 
-nnoremap <leader>[ :bp<CR>
 nnoremap <leader>/ :%!sort -R<CR>
+nnoremap <leader><Down> <C-W>j
+nnoremap <leader><Up> <C-W>k
+nnoremap <leader>[ :bp<CR>
 nnoremap <leader>] :bn<CR>
 nnoremap <leader>f :Ack<Space>
 nnoremap <leader>j vipJ
@@ -50,8 +52,7 @@ nnoremap <leader>l viwc[]<Esc>hpeli[]<Esc>i
 nnoremap <leader>s :source $MYVIMRC<CR>
 nnoremap <leader>t :FZF<CR>
 nnoremap <leader>v :edit $MYVIMRC<CR>
-nnoremap <leader><Up> <C-W>k
-nnoremap <leader><Down> <C-W>j
+vnoremap <leader>l xi[]<Esc>hpeli[]<Esc>i
 
 autocmd VimEnter * silent! cd %:p:h
 autocmd FileType crontab setlocal nobackup nowritebackup
@@ -81,7 +82,6 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'mileszs/ack.vim'
 Plug 'raimondi/delimitmate'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
