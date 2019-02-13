@@ -46,7 +46,7 @@ nnoremap <leader>/ :%!sort -R<CR>
 nnoremap <leader>] :bn<CR>
 nnoremap <leader>f :Ack<Space>
 nnoremap <leader>j vipJ
-nnoremap <leader>l bcw[]<Esc>hpeli[]<Esc>i
+nnoremap <leader>l viwc[]<Esc>hpeli[]<Esc>i
 nnoremap <leader>s :source $MYVIMRC<CR>
 nnoremap <leader>t :FZF<CR>
 nnoremap <leader>v :edit $MYVIMRC<CR>
