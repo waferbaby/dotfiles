@@ -4,7 +4,6 @@ let g:airline_theme = 'monochrome'
 let g:airline#extensions#bufferline#overwrite_variables=0
 let g:bufferline_echo = 0
 let g:fzf_layout = { 'down': '~60%' }
-let g:gutentags_ctags_tagfile = '.tags'
 
 let loaded_netrwPlugin = 1
 
@@ -82,7 +81,6 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-bufferline'
 Plug 'junegunn/fzf'
-Plug 'ludovicchabant/vim-gutentags'
 Plug 'mileszs/ack.vim'
 Plug 'raimondi/delimitmate'
 Plug 'tpope/vim-fugitive'
