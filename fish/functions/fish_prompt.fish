@@ -7,7 +7,6 @@ set fish_color_host EEEEEE --underline
 function fish_prompt
   set last_status $status
 
-  printf '⚡ ️ '
   set_color $fish_color_user
   printf '%s' (whoami)
   set_color normal
