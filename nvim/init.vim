@@ -1,6 +1,6 @@
 let g:ackhighlight = 1
 let g:ackprg = 'rg --vimgrep --no-heading'
-let g:airline_theme = 'monochrome'
+let g:airline_theme = 'serene'
 let g:airline#extensions#bufferline#overwrite_variables=0
 let g:bufferline_echo = 0
 let g:fzf_layout = { 'down': '~60%' }
