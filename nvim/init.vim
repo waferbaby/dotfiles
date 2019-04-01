@@ -2,6 +2,7 @@ let g:ackhighlight = 1
 let g:ackprg = 'rg --vimgrep --no-heading'
 let g:airline_theme = 'serene'
 let g:airline#extensions#bufferline#overwrite_variables=0
+let g:deoplete#enable_at_startup = 1
 let g:bufferline_echo = 0
 let g:fzf_layout = { 'down': '~60%' }
 
@@ -82,8 +83,12 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-bufferline'
 Plug 'junegunn/fzf'
+Plug 'leshill/vim-json'
 Plug 'mileszs/ack.vim'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
 Plug 'raimondi/delimitmate'
+Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
