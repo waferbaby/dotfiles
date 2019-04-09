@@ -1,10 +1,7 @@
 let g:ackhighlight = 1
 let g:ackprg = 'rg --vimgrep --no-heading'
-let g:ale_linters = { 'javascript': ['eslint'], 'ruby': ['rubocop'] }
-let g:airline_theme = 'serene'
-let g:airline#extensions#bufferline#overwrite_variables=0
-let g:deoplete#enable_at_startup = 1
 let g:bufferline_echo = 0
+let g:ale_linters = { 'javascript': ['eslint'], 'ruby': ['rubocop'] }
 let g:fzf_layout = { 'down': '~60%' }
 
 let loaded_netrwPlugin = 1
@@ -27,7 +24,6 @@ set ignorecase
 set incsearch
 set nofoldenable
 set nohlsearch
-set noshowmode
 set number
 set smartcase
 set smarttab
@@ -54,6 +50,10 @@ nnoremap <leader>t :FZF<CR>
 nnoremap <leader>v :edit $MYVIMRC<CR>
 
 autocmd VimEnter * silent! cd %:p:h
+autocmd VimEnter * let &statusline='%{bufferline#refresh_status()}'
+                   \.bufferline#get_status_string()
+                   \."%=%y\ (%l/%L)\ %P"
+
 autocmd FileType crontab setlocal nobackup nowritebackup
 autocmd BufNewFile,BufFilePre,BufRead *.txt set filetype=markdown
 
@@ -84,14 +84,9 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-bufferline'
 Plug 'junegunn/fzf'
-Plug 'leshill/vim-json'
 Plug 'mileszs/ack.vim'
-Plug 'mxw/vim-jsx'
-Plug 'pangloss/vim-javascript'
 Plug 'raimondi/delimitmate'
 Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
 
 call plug#end()
