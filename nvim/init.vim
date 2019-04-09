@@ -1,5 +1,6 @@
 let g:ackhighlight = 1
 let g:ackprg = 'rg --vimgrep --no-heading'
+let g:ale_linters = { 'javascript': ['eslint'], 'ruby': ['rubocop'] }
 let g:airline_theme = 'serene'
 let g:airline#extensions#bufferline#overwrite_variables=0
 let g:deoplete#enable_at_startup = 1
