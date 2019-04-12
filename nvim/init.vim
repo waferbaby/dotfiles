@@ -66,9 +66,10 @@ augroup end
 
 augroup markdown
   autocmd!
-  autocmd FileType markdown nnoremap <leader>h yitvatp
-  autocmd FileType markdown nnoremap <leader>l viwc[]<Esc>hpeli[]<Esc>i
-  autocmd FileType markdown vnoremap <leader>l xi[]<Esc>hpeli[]<Esc>i
+  autocmd FileType markdown nnoremap <leader>l ciw[<C-r>"][]<Esc>i
+  autocmd FileType markdown vnoremap <leader>l c[<C-r>"][]<Esc>i
+  autocmd FileType markdown nnoremap <leader>L ciw[<C-r>"]()<Esc>i
+  autocmd FileType markdown vnoremap <leader>L c[<C-r>"]()<Esc>i
 augroup end
 
 augroup usesthis
