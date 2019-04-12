@@ -3,11 +3,9 @@ let g:ackprg = 'rg --vimgrep --no-heading'
 let g:bufferline_echo = 0
 let g:ale_linters = { 'javascript': ['eslint'], 'ruby': ['rubocop'] }
 let g:fzf_layout = { 'down': '~60%' }
+let g:indentLine_char = '▏'
 
 let loaded_netrwPlugin = 1
-
-nnoremap <space> <nop>
-map <space> <leader>
 
 set clipboard=unnamed
 set cole=0
@@ -37,6 +35,9 @@ hi SpellBad cterm=bold ctermfg=255 ctermbg=9
 hi SpellCap cterm=bold ctermfg=255 ctermbg=56
 hi StatusLine cterm=bold
 hi StatusLineNC cterm=bold ctermfg=245
+
+nnoremap <space> <nop>
+map <space> <leader>
 
 nnoremap <leader>/ :%!sort -R<CR>
 nnoremap <leader><Down> <C-W>j
@@ -90,6 +91,7 @@ Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'raimondi/delimitmate'
 Plug 'tpope/vim-fugitive'
+Plug 'Yggdroot/indentLine'
 Plug 'w0rp/ale'
 
 call plug#end()
