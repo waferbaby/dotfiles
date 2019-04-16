@@ -43,6 +43,8 @@ map <space> <leader>
 nnoremap <leader>/ :%!sort -R<CR>
 nnoremap <leader><Down> <C-W>j
 nnoremap <leader><Up> <C-W>k
+nnoremap <leader><Left> <C-W>h
+nnoremap <leader><Right> <C-W>l
 nnoremap <leader>[ :bp<CR>
 nnoremap <leader>] :bn<CR>
 nnoremap <leader>f :Ack<Space>
