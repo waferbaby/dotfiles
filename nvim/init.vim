@@ -40,6 +40,8 @@ hi StatusLineNC cterm=bold ctermfg=245
 nnoremap <space> <nop>
 map <space> <leader>
 
+noremap <leader>c :TComment<CR>
+
 nnoremap <leader>/ :%!sort -R<CR>
 nnoremap <leader><Down> <C-W>j
 nnoremap <leader><Up> <C-W>k
@@ -94,8 +96,8 @@ Plug 'mileszs/ack.vim'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'raimondi/delimitmate'
+Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
-Plug 'Yggdroot/indentLine'
 Plug 'w0rp/ale'
 
 call plug#end()
