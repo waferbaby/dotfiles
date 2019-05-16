@@ -5,6 +5,7 @@ let g:buftabs_active_highlight_group = 'StatusLine'
 let g:buftabs_inactive_highlight_group = 'StatusLineNC'
 let g:buftabs_in_statusline = 1
 let g:buftabs_only_basename = 1
+let g:buftabs_separator = ":"
 let g:fzf_layout = { 'down': '~60%' }
 
 let loaded_netrwPlugin = 1
@@ -30,9 +31,11 @@ set shortmess+=I
 set tabstop=2
 
 set statusline+=%=
+set statusline+=%#User1#
+set statusline+=%{fugitive#head()!=''?'⑂\ '.fugitive#head():''}
 set statusline+=%#StatusLineNC#
-set statusline+=%{FugitiveStatusline()}\ 
-set statusline+=%y\ (%l/%L)\ %P
+set statusline+=\ 
+set statusline+=(%l/%L)\ %P
 
 hi Error cterm=bold ctermfg=255 ctermbg=9
 hi IncSearch cterm=underline ctermfg=255 ctermbg=238
@@ -43,6 +46,7 @@ hi SpellBad cterm=bold ctermfg=255 ctermbg=9
 hi SpellCap cterm=bold ctermfg=255 ctermbg=56
 hi StatusLine ctermfg=232 ctermbg=255
 hi StatusLineNC cterm=none ctermfg=242 ctermbg=232
+hi User1 ctermfg=249
 
 nnoremap <space> <nop>
 map <space> <leader>
