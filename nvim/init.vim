@@ -1,6 +1,8 @@
 let g:ackhighlight = 1
 let g:ackprg = 'rg --vimgrep --no-heading'
 let g:ale_linters = { 'javascript': ['eslint'], 'ruby': ['rubocop'] }
+let g:buftabs_active_highlight_group = 'StatusLine'
+let g:buftabs_inactive_highlight_group = 'StatusLineNC'
 let g:buftabs_in_statusline = 1
 let g:buftabs_only_basename = 1
 let g:fzf_layout = { 'down': '~60%' }
@@ -27,7 +29,6 @@ set shiftwidth=2
 set shortmess+=I
 set tabstop=2
 
-set statusline=%{buftabs#statusline()}
 set statusline+=%=%y\ (%l/%L)\ %P
 
 hi Error cterm=bold ctermfg=255 ctermbg=9
@@ -37,7 +38,7 @@ hi MatchParen cterm=underline ctermfg=255 ctermbg=238
 hi Search cterm=underline ctermfg=255 ctermbg=238
 hi SpellBad cterm=bold ctermfg=255 ctermbg=9
 hi SpellCap cterm=bold ctermfg=255 ctermbg=56
-hi StatusLine cterm=bold
+hi StatusLine ctermfg=232 ctermbg=255
 hi StatusLineNC cterm=bold ctermfg=245
 
 nnoremap <space> <nop>
