@@ -1,18 +1,11 @@
 let g:ackhighlight = 1
 let g:ackprg = 'rg --vimgrep --no-heading'
-let g:bufferline_echo = 0
 let g:ale_linters = { 'javascript': ['eslint'], 'ruby': ['rubocop'] }
+let g:buftabs_in_statusline = 1
+let g:buftabs_only_basename = 1
 let g:fzf_layout = { 'down': '~60%' }
 
 let loaded_netrwPlugin = 1
-
-set clipboard=unnamed
-set cole=0
-set encoding=utf8
-set shell=/bin/bash
-set shiftwidth=2
-set shortmess+=I
-set tabstop=2
 
 set autoread
 set autowriteall
@@ -24,6 +17,18 @@ set nohlsearch
 set number
 set smartcase
 set smarttab
+
+set clipboard=unnamed
+set cole=0
+set encoding=utf8
+set laststatus=2
+set shell=/bin/bash
+set shiftwidth=2
+set shortmess+=I
+set tabstop=2
+
+set statusline=%{buftabs#statusline()}
+set statusline+=%=%y\ (%l/%L)\ %P
 
 hi Error cterm=bold ctermfg=255 ctermbg=9
 hi IncSearch cterm=underline ctermfg=255 ctermbg=238
@@ -54,10 +59,6 @@ nnoremap <leader>t :FZF<CR>
 nnoremap <leader>v :edit $MYVIMRC<CR>
 
 autocmd VimEnter * silent! cd %:p:h
-autocmd VimEnter * let &statusline='%{bufferline#refresh_status()}'
-                   \.bufferline#get_status_string()
-                   \."%=%y\ (%l/%L)\ %P"
-
 autocmd FileType crontab setlocal nobackup nowritebackup
 autocmd BufNewFile,BufFilePre,BufRead *.txt set filetype=markdown
 
@@ -87,7 +88,6 @@ augroup END
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'airblade/vim-gitgutter'
-Plug 'bling/vim-bufferline'
 Plug 'junegunn/fzf'
 Plug 'leshill/vim-json'
 Plug 'mileszs/ack.vim'
@@ -96,6 +96,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'raimondi/delimitmate'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
+Plug 'vim-scripts/buftabs'
 Plug 'w0rp/ale'
 
 call plug#end()
