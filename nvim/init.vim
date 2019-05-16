@@ -33,7 +33,7 @@ set tabstop=2
 set statusline+=%=
 set statusline+=%#User1#
 set statusline+=%{fugitive#head()!=''?'⑂\ '.fugitive#head():''}
-set statusline+=%#StatusLineNC#
+set statusline+=%#User2#
 set statusline+=\ 
 set statusline+=(%l/%L)\ %P
 
@@ -47,6 +47,7 @@ hi SpellCap cterm=bold ctermfg=255 ctermbg=56
 hi StatusLine ctermfg=232 ctermbg=255
 hi StatusLineNC cterm=none ctermfg=242 ctermbg=232
 hi User1 ctermfg=249
+hi User2 ctermfg=243
 
 nnoremap <space> <nop>
 map <space> <leader>
