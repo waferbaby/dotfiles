@@ -29,7 +29,10 @@ set shiftwidth=2
 set shortmess+=I
 set tabstop=2
 
-set statusline+=%=%{FugitiveStatusline()}\ %y\ (%l/%L)\ %P
+set statusline+=%=
+set statusline+=%#StatusLineNC#
+set statusline+=%{FugitiveStatusline()}\ 
+set statusline+=%y\ (%l/%L)\ %P
 
 hi Error cterm=bold ctermfg=255 ctermbg=9
 hi IncSearch cterm=underline ctermfg=255 ctermbg=238
@@ -39,7 +42,7 @@ hi Search cterm=underline ctermfg=255 ctermbg=238
 hi SpellBad cterm=bold ctermfg=255 ctermbg=9
 hi SpellCap cterm=bold ctermfg=255 ctermbg=56
 hi StatusLine ctermfg=232 ctermbg=255
-hi StatusLineNC cterm=bold ctermfg=245
+hi StatusLineNC cterm=none ctermfg=242 ctermbg=232
 
 nnoremap <space> <nop>
 map <space> <leader>
