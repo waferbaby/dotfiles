@@ -3,8 +3,6 @@ let g:ackprg = 'rg --vimgrep --no-heading'
 let g:bufferline_echo = 0
 let g:ale_linters = { 'javascript': ['eslint'], 'ruby': ['rubocop'] }
 let g:fzf_layout = { 'down': '~60%' }
-let g:indentLine_char = '▏'
-let g:indentLine_color_term = 235
 
 let loaded_netrwPlugin = 1
 
