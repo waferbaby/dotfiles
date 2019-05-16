@@ -29,7 +29,7 @@ set shiftwidth=2
 set shortmess+=I
 set tabstop=2
 
-set statusline+=%=%y\ (%l/%L)\ %P
+set statusline+=%=%{FugitiveStatusline()}\ %y\ (%l/%L)\ %P
 
 hi Error cterm=bold ctermfg=255 ctermbg=9
 hi IncSearch cterm=underline ctermfg=255 ctermbg=238
