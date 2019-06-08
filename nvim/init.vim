@@ -1,11 +1,6 @@
 let g:ackhighlight = 1
 let g:ackprg = 'rg --vimgrep --no-heading'
 let g:ale_linters = { 'javascript': ['eslint'], 'ruby': ['rubocop'] }
-let g:buftabs_active_highlight_group = 'StatusLine'
-let g:buftabs_inactive_highlight_group = 'StatusLineNC'
-let g:buftabs_in_statusline = 1
-let g:buftabs_only_basename = 1
-let g:buftabs_separator = ":"
 let g:fzf_layout = { 'down': '~60%' }
 
 let loaded_netrwPlugin = 1
@@ -30,9 +25,19 @@ set shiftwidth=2
 set shortmess+=I
 set tabstop=2
 
+function! GitBranch()
+  let branch = fugitive#head()
+  if branch != ''
+    return '⑂ '.branch
+  else
+    return ''
+endfunction
+
+set statusline=
+set statusline+=%f
 set statusline+=%=
 set statusline+=%#User1#
-set statusline+=%{fugitive#head()!=''?'⑂\ '.fugitive#head():''}
+set statusline+=%{GitBranch()}
 set statusline+=%#User2#
 set statusline+=\ 
 set statusline+=(%l/%L)\ %P
@@ -105,7 +110,6 @@ Plug 'pangloss/vim-javascript'
 Plug 'raimondi/delimitmate'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
-Plug 'vim-scripts/buftabs'
 Plug 'w0rp/ale'
 
 call plug#end()
