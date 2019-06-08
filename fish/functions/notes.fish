@@ -1,4 +1,4 @@
-function notes -a 'note_name'
+function notes
   set source_directory $PWD
   cd ~/Documents/Notes
   nvim +":FZF"
