@@ -1,7 +1,7 @@
 let g:ackhighlight = 1
 let g:ackprg = 'rg --vimgrep --no-heading'
 let g:ale_linters = { 'javascript': ['eslint'], 'ruby': ['rubocop'] }
-let g:fzf_layout = { 'down': '~60%' }
+let g:fzf_layout = { 'down': '~20%' }
 
 let loaded_netrwPlugin = 1
 
@@ -24,14 +24,6 @@ set shell=/bin/bash
 set shiftwidth=2
 set shortmess+=I
 set tabstop=2
-
-function! GitBranch()
-  let branch = fugitive#head()
-  if branch != ''
-    return '⑂ '.branch
-  else
-    return ''
-endfunction
 
 set statusline=
 set statusline+=%f
@@ -113,3 +105,11 @@ Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
 
 call plug#end()
+
+function! GitBranch()
+  let branch = fugitive#head()
+  if branch != ''
+    return branch
+  else
+    return ''
+endfunction
