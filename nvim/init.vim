@@ -38,9 +38,10 @@ hi StatusLineNC cterm=none ctermfg=242 ctermbg=232
 hi User1 ctermfg=249
 hi User2 ctermfg=243
 
-map <space> <leader>
-noremap <leader>c :TComment<CR>
 nnoremap <space> <nop>
+map <space> <leader>
+
+noremap <leader>c :TComment<CR>
 nnoremap <leader>/ :%!sort -R<CR>
 nnoremap <leader><Down> <C-W>j
 nnoremap <leader><Up> <C-W>k
