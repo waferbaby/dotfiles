@@ -9,6 +9,7 @@ let loaded_netrwPlugin = 1
 set autoread
 set autowriteall
 set expandtab
+set exrc
 set ignorecase
 set incsearch
 set nofoldenable
@@ -86,6 +87,7 @@ augroup END
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'airblade/vim-gitgutter'
+Plug 'ajh17/VimCompletesMe'
 Plug 'bling/vim-bufferline'
 Plug 'junegunn/fzf'
 Plug 'leshill/vim-json'
