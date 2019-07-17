@@ -74,11 +74,6 @@ augroup markdown
   autocmd FileType markdown vnoremap <leader>L c[<C-r>"]()<Esc>i
 augroup end
 
-augroup usesthis
-  autocmd!
-  autocmd BufWriteCmd ~/Development/usesthis/posts/*.markdown w | silent! exec '!~/Development/usesthis/tasks/link_gear %:p' | silent! %s/[‘’]/'/g | silent! %s/[“”]/"/g | e
-augroup end
-
 augroup nolines
   autocmd!
   autocmd BufNew,BufNewFile,BufRead *.txt,*.md,*.markdown :set nonu
