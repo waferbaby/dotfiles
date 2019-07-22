@@ -59,7 +59,6 @@ nnoremap <leader>v :edit $MYVIMRC<CR>
 autocmd VimEnter * call SetStatusline()
 autocmd VimEnter * silent! cd %:p:h
 autocmd FileType crontab setlocal nobackup nowritebackup
-autocmd BufNewFile,BufFilePre,BufRead *.txt set filetype=markdown
 
 augroup fzf 
   autocmd!
