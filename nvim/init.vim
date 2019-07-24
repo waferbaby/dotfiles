@@ -2,7 +2,7 @@ let g:ackhighlight = 1
 let g:ackprg = 'rg --vimgrep --no-heading'
 let g:ale_linters = { 'javascript': ['eslint'], 'ruby': ['rubocop'] }
 let g:bufferline_echo = 0
-let g:fzf_layout = { 'down': '~20%' }
+let g:fzf_layout = { 'down': '~50%' }
 
 let loaded_netrwPlugin = 1
 
@@ -103,13 +103,15 @@ function! GitBranch()
     return ''
 endfunction
 
-function SetStatusline()
-  let &statusline='%{bufferline#refresh_status()}'.bufferline#get_status_string()
+if !exists('*SetStatusline')
+  function SetStatusline()
+    let &statusline='%{bufferline#refresh_status()}'.bufferline#get_status_string()
 
-  set statusline+=%=
-  set statusline+=%#User1#
-  set statusline+=%{GitBranch()}
-  set statusline+=%#User2#
-  set statusline+=\ 
-  set statusline+=(%l/%L)\ %P
-endfunction
+    set statusline+=%=
+    set statusline+=%#User1#
+    set statusline+=%{GitBranch()}
+    set statusline+=%#User2#
+    set statusline+=\ 
+    set statusline+=(%l/%L)\ %P
+  endfunction
+endif
