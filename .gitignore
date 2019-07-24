@@ -1,4 +1,5 @@
 fish/fishd*
 fish/fish_variables
+nvim/autoload
 nvim/plugged
 .vim/
