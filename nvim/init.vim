@@ -2,6 +2,7 @@ let g:ackhighlight = 1
 let g:ackprg = 'rg --vimgrep --no-heading'
 let g:ale_linters = { 'javascript': ['eslint'], 'ruby': ['rubocop'] }
 let g:bufferline_echo = 0
+let g:bufferline_fname_mod = ':p:.'
 let g:fzf_layout = { 'down': '~50%' }
 
 let loaded_netrwPlugin = 1
