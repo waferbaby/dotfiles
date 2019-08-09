@@ -4,6 +4,7 @@ let g:ale_linters = { 'javascript': ['eslint'], 'ruby': ['rubocop'] }
 let g:bufferline_echo = 0
 let g:bufferline_fname_mod = ':p:.'
 let g:fzf_layout = { 'down': '~50%' }
+let g:gutentags_ctags_file = '.tags'
 
 let loaded_netrwPlugin = 1
 
@@ -86,6 +87,7 @@ Plug 'ajh17/VimCompletesMe'
 Plug 'bling/vim-bufferline'
 Plug 'junegunn/fzf'
 Plug 'leshill/vim-json'
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'mileszs/ack.vim'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
