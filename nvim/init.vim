@@ -4,7 +4,7 @@ let g:ale_linters = { 'javascript': ['eslint'], 'ruby': ['rubocop'] }
 let g:bufferline_echo = 0
 let g:bufferline_fname_mod = ':p:.'
 let g:fzf_layout = { 'down': '~50%' }
-let g:gutentags_ctags_file = '.tags'
+let g:gutentags_ctags_tagfile = '.tags'
 
 let loaded_netrwPlugin = 1
 
@@ -106,11 +106,20 @@ function! GitBranch()
     return ''
 endfunction
 
+function! GutentagsStatus()
+  let status = gutentags#statusline('[', ']')
+  if status != ''
+    return status . " "
+  else
+    return ''
+endfunction
+
 if !exists('*SetStatusline')
   function SetStatusline()
     let &statusline='%{bufferline#refresh_status()}'.bufferline#get_status_string()
 
     set statusline+=%=
+    set statusline+=%{GutentagsStatus()}
     set statusline+=%#User1#
     set statusline+=%{GitBranch()}
     set statusline+=%#User2#
