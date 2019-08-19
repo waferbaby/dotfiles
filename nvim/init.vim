@@ -38,8 +38,9 @@ hi SpellBad cterm=bold ctermfg=255 ctermbg=9
 hi SpellCap cterm=bold ctermfg=255 ctermbg=56
 hi StatusLine ctermfg=232 ctermbg=255
 hi StatusLineNC cterm=none ctermfg=242 ctermbg=232
-hi User1 ctermfg=249
-hi User2 ctermfg=243
+hi User1 ctermfg=250 ctermbg=232
+hi User2 ctermfg=4 ctermbg=232
+hi User3 ctermfg=243 ctermbg=232
 
 nnoremap <space> <nop>
 map <space> <leader>
@@ -123,7 +124,8 @@ if !exists('*SetStatusline')
     set statusline+=%#User1#
     set statusline+=%{GitBranch()}
     set statusline+=%#User2#
-    set statusline+=\ 
+    set statusline+=\ %y\ 
+    set statusline+=%#User3#
     set statusline+=(%l/%L)\ %P
   endfunction
 endif
