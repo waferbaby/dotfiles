@@ -20,6 +20,7 @@ ln -sf ~/.dotfiles/.tmux.conf ~/
 # Install command line tools.
 
 brew install fish
+brew install fzf
 brew install mas
 brew install neovim
 brew install rbenv
@@ -29,7 +30,7 @@ brew install tmux
 # Install fonts.
 
 brew tap caskroom/fonts
-brew cask install font-fira-code
+brew cask install font-ibm-plex
 
 # Install Mac apps.
 
