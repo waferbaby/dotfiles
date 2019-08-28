@@ -11,6 +11,7 @@ ln -sf ~/.dotfiles/parker/ ~/.config/
 ln -sf ~/.dotfiles/.ctags ~/
 ln -sf ~/.dotfiles/.gitconfig ~/
 ln -sf ~/.dotfiles/.gitignore_global ~/
+ln -sf ~/.dotfiles/.ripgreprc ~/
 ln -sf ~/.dotfiles/.tmux.conf ~/
 
 # Install homebrew.
