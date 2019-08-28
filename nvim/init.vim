@@ -10,23 +10,22 @@ let loaded_netrwPlugin = 1
 
 set autoread
 set autowriteall
+set clipboard=unnamed
+set encoding=utf8
 set expandtab
 set exrc
 set ignorecase
 set incsearch
+set laststatus=2
 set nofoldenable
 set nohlsearch
 set number
 set secure
-set smartcase
-set smarttab
-
-set clipboard=unnamed
-set encoding=utf8
-set laststatus=2
 set shell=/bin/bash
 set shiftwidth=2
 set shortmess+=I
+set smartcase
+set smarttab
 set tabstop=2
 
 hi Error cterm=bold ctermfg=255 ctermbg=9
@@ -62,11 +61,6 @@ nnoremap <leader>v :edit $MYVIMRC<CR>
 autocmd VimEnter * call SetStatusline()
 autocmd VimEnter * silent! cd %:p:h
 autocmd FileType crontab setlocal nobackup nowritebackup
-
-augroup fzf 
-  autocmd!
-  autocmd FileType fzf set laststatus=0 noshowmode noruler | autocmd BufLeave <buffer> set laststatus=2 showmode ruler
-augroup end
 
 augroup markdown
   autocmd!
@@ -110,7 +104,7 @@ endfunction
 function! GutentagsStatus()
   let status = gutentags#statusline('[', ']')
   if status != ''
-    return status . " "
+    return status . ' '
   else
     return ''
 endfunction
