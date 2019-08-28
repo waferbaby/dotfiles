@@ -17,11 +17,11 @@ set incsearch
 set nofoldenable
 set nohlsearch
 set number
+set secure
 set smartcase
 set smarttab
 
 set clipboard=unnamed
-set cole=0
 set encoding=utf8
 set laststatus=2
 set shell=/bin/bash
