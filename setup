@@ -22,7 +22,6 @@ ln -sf ~/.dotfiles/.tmux.conf ~/
 
 brew install fish
 brew install fzf
-brew install mas
 brew install neovim
 brew install rbenv
 brew install ripgrep
@@ -42,8 +41,6 @@ brew cask install keepingyouawake
 brew cask install launchbar
 brew cask install moom
 brew cask install the-unarchiver
-
-mas lucky reeder
 
 # Switch shells.
 
