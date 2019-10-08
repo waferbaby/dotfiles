@@ -29,7 +29,7 @@ brew install tmux
 
 # Install fonts.
 
-brew tap caskroom/fonts
+brew tap homebrew/cask-fonts
 brew cask install font-ibm-plex
 
 # Install Mac apps.
