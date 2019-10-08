@@ -78,7 +78,6 @@ augroup END
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'airblade/vim-gitgutter'
-Plug 'ajh17/VimCompletesMe'
 Plug 'bling/vim-bufferline'
 Plug 'junegunn/fzf'
 Plug 'leshill/vim-json'
