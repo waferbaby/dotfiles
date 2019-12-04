@@ -26,6 +26,7 @@ set shiftwidth=2
 set shortmess+=I
 set smartcase
 set smarttab
+set softtabstop=2
 set tabstop=2
 
 hi Error cterm=bold ctermfg=255 ctermbg=9
