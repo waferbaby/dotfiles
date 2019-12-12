@@ -3,6 +3,8 @@ let g:ackprg = 'rg --vimgrep --no-heading'
 let g:ale_linters = { 'javascript': ['eslint'], 'ruby': ['rubocop'] }
 let g:bufferline_echo = 0
 let g:bufferline_fname_mod = ':p:.'
+let g:bufferline_pathshorten = 1
+let g:bufferline_show_bufnr = 0
 let g:fzf_layout = { 'down': '~50%' }
 let g:gutentags_ctags_tagfile = '.tags'
 
