@@ -38,11 +38,11 @@ hi MatchParen cterm=underline ctermfg=255 ctermbg=238
 hi Search cterm=underline ctermfg=255 ctermbg=238
 hi SpellBad cterm=bold ctermfg=255 ctermbg=9
 hi SpellCap cterm=bold ctermfg=255 ctermbg=56
-hi StatusLine ctermfg=232 ctermbg=255
-hi StatusLineNC cterm=none ctermfg=242 ctermbg=232
-hi User1 ctermfg=250 ctermbg=232
-hi User2 ctermfg=4 ctermbg=232
-hi User3 ctermfg=243 ctermbg=232
+hi StatusLine cterm=bold ctermfg=8 ctermbg=none
+hi StatusLineNC ctermfg=250 ctermbg=none
+hi User1 ctermfg=255 ctermbg=none
+hi User2 ctermfg=10 ctermbg=none
+hi User3 ctermfg=243 ctermbg=none
 
 nnoremap <space> <nop>
 map <space> <leader>
