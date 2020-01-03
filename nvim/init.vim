@@ -43,6 +43,7 @@ hi StatusLineNC cterm=none ctermfg=250 ctermbg=none
 hi User1 ctermfg=255 ctermbg=none
 hi User2 ctermfg=10 ctermbg=none
 hi User3 ctermfg=243 ctermbg=none
+hi VertSplit cterm=none ctermfg=237
 
 nnoremap <space> <nop>
 map <space> <leader>
