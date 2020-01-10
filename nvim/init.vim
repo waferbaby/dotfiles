@@ -70,10 +70,10 @@ autocmd FileType crontab setlocal nobackup nowritebackup
 
 augroup markdown
   autocmd!
-  autocmd FileType markdown nnoremap <leader>l ciw[<C-r>"][]<Esc>i
-  autocmd FileType markdown vnoremap <leader>l c[<C-r>"][]<Esc>i
-  autocmd FileType markdown nnoremap <leader>L ciw[<C-r>"]()<Esc>i
-  autocmd FileType markdown vnoremap <leader>L c[<C-r>"]()<Esc>i
+  autocmd FileType markdown nnoremap <leader>l "xciw[<C-r>"][]<Esc>i
+  autocmd FileType markdown vnoremap <leader>l "xc[<C-r>"][]<Esc>i
+  autocmd FileType markdown nnoremap <leader>L "xciw[<C-r>"]()<Esc>i
+  autocmd FileType markdown vnoremap <leader>L "xc[<C-r>"]()<Esc>i
 augroup end
 
 augroup nolines
