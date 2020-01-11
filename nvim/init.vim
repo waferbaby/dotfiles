@@ -85,6 +85,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-bufferline'
+Plug 'chr4/nginx.vim'
 Plug 'dag/vim-fish'
 Plug 'jdonaldson/vaxe'
 Plug 'junegunn/fzf'
