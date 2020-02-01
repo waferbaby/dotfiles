@@ -1,10 +1,6 @@
-if test -z "$TMUX"
-  tmux new-session -A -s default
-end
-
 set fish_greeting
 
-set PATH /usr/local/bin /usr/local/sbin $PATH
+set PATH ~/.rbenv/bin $PATH
 
 set -x EDITOR /usr/local/bin/nvim
 set -x FZF_DEFAULT_COMMAND "rg --files --follow --hidden --glob '!.git/*'"
