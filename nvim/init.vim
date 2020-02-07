@@ -6,7 +6,6 @@ let g:bufferline_fname_mod = ':p:.'
 let g:bufferline_pathshorten = 1
 let g:bufferline_show_bufnr = 0
 let g:fzf_layout = { 'down': '~50%' }
-let g:gutentags_ctags_tagfile = '.tags'
 
 let loaded_netrwPlugin = 1
 
@@ -85,12 +84,8 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-bufferline'
-Plug 'chr4/nginx.vim'
-Plug 'dag/vim-fish'
-Plug 'jdonaldson/vaxe'
 Plug 'junegunn/fzf'
 Plug 'leshill/vim-json'
-Plug 'ludovicchabant/vim-gutentags'
 Plug 'mileszs/ack.vim'
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
