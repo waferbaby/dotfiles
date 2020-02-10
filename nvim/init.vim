@@ -104,20 +104,11 @@ function! GitBranch()
     return ''
 endfunction
 
-function! GutentagsStatus()
-  let status = gutentags#statusline('[', ']')
-  if status != ''
-    return status . ' '
-  else
-    return ''
-endfunction
-
 if !exists('*SetStatusline')
   function SetStatusline()
     let &statusline='%{bufferline#refresh_status()}'.bufferline#get_status_string()
 
     set statusline+=%=
-    set statusline+=%{GutentagsStatus()}
     set statusline+=%#User1#
     set statusline+=%{GitBranch()}
     set statusline+=%#User2#
