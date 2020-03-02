@@ -13,9 +13,8 @@ set -x FZF_DEFAULT_OPTS "--reverse"
 
 if status is-interactive
   source (rbenv init -|psub)
+  eval (ssh-agent -c) >> /dev/null
 end
-
-eval (ssh-agent -c) >> /dev/null
 
 if test -d ~/.config/fish/configs
   for config_file in ~/.config/fish/configs/*
