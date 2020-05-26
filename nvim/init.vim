@@ -46,6 +46,8 @@ hi User2 ctermfg=10 ctermbg=none
 hi User3 ctermfg=243 ctermbg=none
 hi VertSplit cterm=none ctermfg=237
 
+hi! link SignColumn LineNr
+
 nnoremap <space> <nop>
 map <space> <leader>
 
