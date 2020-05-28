@@ -37,7 +37,7 @@ hi MatchParen cterm=underline ctermfg=255 ctermbg=238
 hi Search cterm=underline ctermfg=255 ctermbg=238
 hi SpellBad cterm=bold ctermfg=255 ctermbg=9
 hi SpellCap cterm=bold ctermfg=255 ctermbg=56
-hi StatusLine cterm=bold ctermfg=8 ctermbg=none
+hi StatusLine cterm=bold ctermfg=7 ctermbg=none
 hi StatusLineNC cterm=none ctermfg=250 ctermbg=none
 hi Tabline ctermbg=none ctermfg=12
 hi TabLineFill cterm=none
