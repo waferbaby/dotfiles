@@ -75,6 +75,7 @@ augroup markdown
   autocmd FileType markdown vnoremap <leader>l "xc[<C-r>"][]<Esc>i
   autocmd FileType markdown nnoremap <leader>L "xciw[<C-r>"]()<Esc>i
   autocmd FileType markdown vnoremap <leader>L "xc[<C-r>"]()<Esc>i
+  autocmd FileType markdown nnoremap <leader>k di(c%[]<Esc>i
 augroup end
 
 augroup nolines
@@ -87,11 +88,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-bufferline'
 Plug 'junegunn/fzf'
-Plug 'leshill/vim-json'
 Plug 'mileszs/ack.vim'
-Plug 'mxw/vim-jsx'
-Plug 'pangloss/vim-javascript'
-Plug 'raimondi/delimitmate'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
