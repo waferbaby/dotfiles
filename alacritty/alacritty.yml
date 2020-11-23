@@ -1,0 +1,11 @@
+window:
+  startup_mode: Fullscreen
+
+scrolling:
+  history: 10000
+  multiplier: 3
+
+font:
+  normal:
+    family: IBM Plex Mono
+  size: 14.0
