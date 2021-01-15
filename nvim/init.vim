@@ -1,9 +1,10 @@
 let g:ackhighlight = 1
-let g:ackprg = 'rg --vimgrep --no-heading'
+let g:ackprg = 'rg --vimgrep --no-heading --smart-case'
+let g:ackpreview = 1
+let g:ack_use_cword_for_empty_search = 1
 let g:ale_linters = { 'javascript': ['eslint'], 'ruby': ['rubocop'] }
 let g:bufferline_echo = 0
 let g:bufferline_fname_mod = ':p:.'
-let g:bufferline_pathshorten = 1
 let g:bufferline_show_bufnr = 0
 let g:fzf_layout = { 'down': '~50%' }
 
