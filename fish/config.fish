@@ -7,7 +7,7 @@ set fish_greeting
 
 set PATH ~/.rbenv/bin $PATH
 
-set -x EDITOR /usr/local/bin/nvim
+set -x EDITOR /usr/bin/nvim
 set -x FZF_DEFAULT_COMMAND "rg --files --follow --hidden --glob '!.git/*'"
 set -x FZF_DEFAULT_OPTS "--reverse"
 
