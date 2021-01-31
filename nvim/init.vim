@@ -76,6 +76,10 @@ augroup markdown
   autocmd FileType markdown vnoremap <leader>l "xc[<C-r>"][]<Esc>i
   autocmd FileType markdown nnoremap <leader>L "xciw[<C-r>"]()<Esc>i
   autocmd FileType markdown vnoremap <leader>L "xc[<C-r>"]()<Esc>i
+  autocmd FileType markdown nnoremap <leader>b "xciw**<C-r>"**<Esc>
+  autocmd FileType markdown vnoremap <leader>b "xc**<C-r>"**<Esc>
+  autocmd FileType markdown nnoremap <leader>i "xciw_<C-r>"_<Esc>
+  autocmd FileType markdown vnoremap <leader>i "xc_<C-r>"_<Esc>
   autocmd FileType markdown nnoremap <leader>k di(c%[]<Esc>i
 augroup end
 
