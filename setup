@@ -1,77 +1,11 @@
 #!/usr/bin/env sh
 
-# Symlink all the things.
-
 mkdir -p ~/.config/
 
 ln -sf ~/.dotfiles/fish/ ~/.config/
 ln -sf ~/.dotfiles/nvim/ ~/.config/
-ln -sf ~/.dotfiles/parker/ ~/.config/
 
-ln -sf ~/.dotfiles/.ctags ~/
 ln -sf ~/.dotfiles/.gitconfig ~/
 ln -sf ~/.dotfiles/.gitignore_global ~/
 ln -sf ~/.dotfiles/.ripgreprc ~/
 ln -sf ~/.dotfiles/.tmux.conf ~/
-
-# Install homebrew.
-
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-# Install command line tools.
-
-brew install fish
-brew install fzf
-brew install neovim
-brew install rbenv
-brew install ripgrep
-brew install tmux
-
-# Install fonts.
-
-brew tap homebrew/cask-fonts
-brew cask install font-ibm-plex
-
-# Install Mac apps.
-
-brew cask install 1password
-brew cask install appcleaner
-brew cask install discord
-brew cask install iterm2
-brew cask install keepingyouawake
-brew cask install launchbar
-brew cask install moom
-brew cask install the-unarchiver
-
-# Switch shells.
-
-sudo chsh -s /usr/local/bin/fish $USER
-
-# Set some nice defaults.
-
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
-defaults write NSGlobalDomain AppleShowAllExtensions -int 1
-defaults write NSGlobalDomain KeyRepeat -int 0
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
-defaults write NSGlobalDomain _HIHideMenuBar -bool true
-
-# Tweak the Dock.
-
-defaults write com.apple.dock autohide -bool true
-defaults write com.apple.dock orientation left
-defaults write com.apple.dock wvous-br-corner -int 5
-defaults write com.apple.dock wvous-tr-corner -int 4
-
-# Tweak iTerm.
-
-defaults write com.googlecode.iterm2 ShowPaneTitles -int 0
-defaults write com.googlecode.iterm2 SplitPaneDimmingAmount -int 0.1
-
-# Show the ~/Library folder.
-
-chflags nohidden ~/Library/
-
-# Restart the Dock and the UI server.
-
-killall Dock
-killall SystemUIServer
