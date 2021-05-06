@@ -1,7 +1,3 @@
-let g:ackhighlight = 1
-let g:ackprg = 'rg --vimgrep --no-heading --smart-case'
-let g:ackpreview = 1
-let g:ack_use_cword_for_empty_search = 1
 let g:ale_linters = { 'javascript': ['eslint'], 'ruby': ['rubocop'] }
 let g:bufferline_echo = 0
 let g:bufferline_fname_mod = ':p:.'
@@ -60,7 +56,7 @@ nnoremap <leader><Left> <C-W>h
 nnoremap <leader><Right> <C-W>l
 nnoremap <leader>[ :bp<CR>
 nnoremap <leader>] :bn<CR>
-nnoremap <leader>f :Ack<Space>
+nnoremap <leader>f :Rg<Space>
 nnoremap <leader>j vipJ
 nnoremap <leader>s :source $MYVIMRC<CR>
 nnoremap <leader>t :FZF<CR>
@@ -92,8 +88,8 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-bufferline'
+Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf'
-Plug 'mileszs/ack.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
