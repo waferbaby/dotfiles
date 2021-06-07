@@ -1,5 +1,17 @@
 #!/usr/bin/env sh
 
+CLI_TOOLS=(neovim tmux fish)
+
+case $(uname) in
+  'Linux')
+    OS='linux'
+    alias installer='sudo apt install'
+    ;;
+  'Darwin')
+    OS='mac'
+    alias installer='brew install'
+esac
+
 mkdir -p ~/.config/
 
 ln -sf ~/.dotfiles/fish/ ~/.config/
@@ -9,3 +21,10 @@ ln -sf ~/.dotfiles/.gitconfig ~/
 ln -sf ~/.dotfiles/.gitignore_global ~/
 ln -sf ~/.dotfiles/.ripgreprc ~/
 ln -sf ~/.dotfiles/.tmux.conf ~/
+
+curl -fLo ~/.dotfiles/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+for item in "${CLI_TOOLS[@]}"
+do
+	installer $item
+done
