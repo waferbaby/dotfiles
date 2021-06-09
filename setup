@@ -16,6 +16,7 @@ mkdir -p ~/.config/
 
 ln -sf ~/.dotfiles/fish/ ~/.config/
 ln -sf ~/.dotfiles/nvim/ ~/.config/
+ln -sf ~/.dotfiles/alacritty/ ~/.config/
 
 ln -sf ~/.dotfiles/.gitconfig ~/
 ln -sf ~/.dotfiles/.gitignore_global ~/
