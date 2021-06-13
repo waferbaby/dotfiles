@@ -104,7 +104,7 @@ function! GitBranch()
     return ''
 endfunction
 
-if !exists('*SetStatusline')
+if !exists('*SetStatusline') && has_key(g:plugs, 'vim-bufferline')
   function SetStatusline()
     let &statusline='%{bufferline#refresh_status()}'.bufferline#get_status_string()
 
