@@ -25,6 +25,10 @@ ln -sf ~/.dotfiles/.tmux.conf ~/
 
 curl -fLo ~/.dotfiles/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+if [ "$OS" = "mac" ]; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
 for item in "${CLI_TOOLS[@]}"
 do
 	installer $item
