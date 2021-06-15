@@ -1,7 +1,5 @@
 #!/usr/bin/env sh
 
-cli_tools=(neovim tmux fish rbenv ripgrep fzf)
-
 mkdir -p ~/.config/
 
 # Symlink all the things.
@@ -20,25 +18,21 @@ curl -fLo ~/.dotfiles/nvim/autoload/plug.vim --create-dirs https://raw.githubuse
 
 case $(uname) in
   'Linux')
-    platform='linux'
-    cli_installer='sudo apt'
-
     sudo apt update
+
+    cli_tools=$(sed -n -E "s/brew \"(.+)\"/\1/p" ~/.dotfiles/Brewfile)
+
+    for item in "${cli_tools[@]}"; do
+	    apt install $item
+    done
     ;;
   'Darwin')
-    platform='mac'
-    cli_installer='brew'
-
     if [ ! type 'brew' > /dev/null 2>&1 ]; then
       /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     fi
+
+    brew bundle --file=~/.dotfiles/Brewfile
 esac
-
-# Install all the command line tools.
-
-for item in "${cli_tools[@]}"; do
-	${cli_installer} install $item
-done
 
 # Install (n)vim plugins.
 
