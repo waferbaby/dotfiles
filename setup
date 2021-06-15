@@ -1,35 +1,45 @@
 #!/usr/bin/env sh
 
-CLI_TOOLS=(neovim tmux fish)
-
-case $(uname) in
-  'Linux')
-    OS='linux'
-    alias installer='sudo apt install'
-    ;;
-  'Darwin')
-    OS='mac'
-    alias installer='brew install'
-esac
+cli_tools=(neovim tmux fish rbenv ripgrep fzf)
 
 mkdir -p ~/.config/
+
+# Symlink all the things.
 
 ln -sf ~/.dotfiles/fish/ ~/.config/
 ln -sf ~/.dotfiles/nvim/ ~/.config/
 ln -sf ~/.dotfiles/alacritty/ ~/.config/
-
 ln -sf ~/.dotfiles/.gitconfig ~/
 ln -sf ~/.dotfiles/.gitignore_global ~/
 ln -sf ~/.dotfiles/.ripgreprc ~/
 ln -sf ~/.dotfiles/.tmux.conf ~/
 
+# Install vim-plug.
+
 curl -fLo ~/.dotfiles/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-if [ "$OS" = "mac" ]; then
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-fi
+case $(uname) in
+  'Linux')
+    platform='linux'
+    cli_installer='sudo apt'
 
-for item in "${CLI_TOOLS[@]}"
-do
-	installer $item
+    sudo apt update
+    ;;
+  'Darwin')
+    platform='mac'
+    cli_installer='brew'
+
+    if [ ! type 'brew' > /dev/null 2>&1 ]; then
+      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    fi
+esac
+
+# Install all the command line tools.
+
+for item in "${cli_tools[@]}"; do
+	${cli_installer} install $item
 done
+
+# Install (n)vim plugins.
+
+nvim -E -c PlugInstall -c q -c q
