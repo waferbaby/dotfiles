@@ -20,10 +20,8 @@ case $(uname) in
   'Linux')
     sudo apt update
 
-    cli_tools=$(sed -n -E "s/brew \"(.+)\"/\1/p" ~/.dotfiles/Brewfile)
-
-    for item in "${cli_tools[@]}"; do
-	    apt install $item
+    for item in $(sed -n -E "s/brew \"(.+)\"/\1/p" ~/.dotfiles/Brewfile); do
+	    sudo apt install $item
     done
     ;;
   'Darwin')
