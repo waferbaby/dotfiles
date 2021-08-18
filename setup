@@ -24,7 +24,7 @@ case $(uname) in
       sudo apt install $item
     done
 
-    fish_path=/usr/local/bin/fish
+    fish_path=$(which fish)
     ;;
   'Darwin')
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
