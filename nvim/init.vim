@@ -2,7 +2,7 @@ let g:ale_linters = { 'javascript': ['eslint'], 'ruby': ['rubocop'] }
 let g:bufferline_echo = 0
 let g:bufferline_fname_mod = ':p:.'
 let g:bufferline_show_bufnr = 0
-let g:fzf_layout = { 'down': '~50%' }
+let g:fzf_layout = { 'window': { 'width': 100, 'height': 20 } }
 
 let loaded_netrwPlugin = 1
 
