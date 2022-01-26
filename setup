@@ -1,9 +1,10 @@
 #!/usr/bin/env sh
 
-mkdir -p ~/.config/
+# Create directories.
+mkdir ~/.config/
+mkdir -p ~/.rbenv/plugins
 
 # Symlink all the things.
-
 ln -sf ~/.dotfiles/fish/ ~/.config/
 ln -sf ~/.dotfiles/nvim/ ~/.config/
 ln -sf ~/.dotfiles/alacritty/ ~/.config/
@@ -12,10 +13,7 @@ ln -sf ~/.dotfiles/.gitignore_global ~/
 ln -sf ~/.dotfiles/.ripgreprc ~/
 ln -sf ~/.dotfiles/.tmux.conf ~/
 
-# Install vim-plug.
-
-curl -fLo ~/.dotfiles/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
+# Install the base packages.
 case $(uname) in
   'Linux')
     sudo apt update
@@ -40,10 +38,16 @@ case $(uname) in
     fi
 esac
 
-# Install (n)vim plugins.
+# Install vim-plug.
+curl -fLo ~/.dotfiles/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+# Install rbenv and ruby-build.
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv && cd ~/.rbenv && src/configure && make -C src
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+
+
+# Install vim plugins.
 nvim -E -c PlugInstall -c q -c q
 
 # Switch to fish
-
 chsh -s $fish_path
