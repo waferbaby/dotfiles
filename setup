@@ -1,10 +1,8 @@
 #!/usr/bin/env sh
 
-# Create directories.
-mkdir ~/.config/
-mkdir -p ~/.rbenv/plugins
-
 # Symlink all the things.
+mkdir ~/.config/
+
 ln -sf ~/.dotfiles/fish/ ~/.config/
 ln -sf ~/.dotfiles/nvim/ ~/.config/
 ln -sf ~/.dotfiles/alacritty/ ~/.config/
@@ -43,8 +41,8 @@ curl -fLo ~/.dotfiles/nvim/autoload/plug.vim --create-dirs https://raw.githubuse
 
 # Install rbenv and ruby-build.
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv && cd ~/.rbenv && src/configure && make -C src
+mkdir -p ~/.rbenv/plugins
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-
 
 # Install vim plugins.
 nvim -E -c PlugInstall -c q -c q
