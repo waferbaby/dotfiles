@@ -17,7 +17,7 @@ case $(uname) in
     sudo apt update
 
     for item in $(sed -n -E "s/brew \"(.+)\"/\1/p" ~/.dotfiles/Brewfile); do
-      sudo apt install $item
+      sudo apt install $item -y
     done
 
     fish_path=$(which fish)
