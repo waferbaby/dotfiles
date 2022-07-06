@@ -5,11 +5,13 @@ end
 
 set fish_greeting
 
-set PATH ~/.rbenv/bin $PATH
+set PATH /usr/local/bin/ ~/.rbenv/bin $PATH
 
 set -x EDITOR /usr/bin/nvim
 set -x FZF_DEFAULT_COMMAND "rg --files --follow --hidden --glob '!.git/*'"
 set -x FZF_DEFAULT_OPTS "--reverse"
+
+export SHELL=/bin/bash
 
 if status is-interactive
   source (rbenv init -|psub)
