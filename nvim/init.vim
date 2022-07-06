@@ -1,4 +1,4 @@
-let g:ale_linters = { 'javascript': ['eslint'], 'ruby': ['rubocop'] }
+let g:ale_linters = { 'ruby': ['rubocop'] }
 let g:bufferline_echo = 0
 let g:bufferline_fname_mod = ':p:.'
 let g:bufferline_show_bufnr = 0
@@ -42,7 +42,6 @@ hi User1 ctermfg=255 ctermbg=none
 hi User2 ctermfg=10 ctermbg=none
 hi User3 ctermfg=243 ctermbg=none
 hi VertSplit cterm=none ctermfg=237
-
 hi! link SignColumn LineNr
 
 nnoremap <space> <nop>
@@ -92,13 +91,14 @@ Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf'
 Plug 'rust-lang/rust.vim'
 Plug 'tomtom/tcomment_vim'
+Plug 'tpope/vim-rails'
 Plug 'tpope/vim-fugitive'
 Plug 'w0rp/ale'
 
 call plug#end()
 
 function! GitBranch()
-  let branch = fugitive#head()
+  let branch = fugitive#Head()
   if branch != ''
     return branch
   else
