@@ -87,6 +87,7 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-bufferline'
+Plug 'ervandew/supertab'
 Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf'
 Plug 'rust-lang/rust.vim'
