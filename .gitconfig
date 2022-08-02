@@ -25,7 +25,7 @@
   untracked = cyan
 
 [core]
-  editor = /usr/bin/nvim
+  editor = /usr/bin/env nvim
   excludesfile = ~/.gitignore_global
   pager = less -r
 
