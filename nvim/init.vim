@@ -1,4 +1,7 @@
+let g:ale_fixers = { 'javascript': ['prettier'], 'css': ['prettier'] }
+let g:ale_fix_on_save = 1
 let g:ale_linters = { 'ruby': ['rubocop'] }
+let g:ale_linters_explicit = 1
 let g:bufferline_echo = 0
 let g:bufferline_fname_mod = ':p:.'
 let g:bufferline_show_bufnr = 0
@@ -31,13 +34,14 @@ hi Error cterm=bold ctermfg=255 ctermbg=9
 hi IncSearch cterm=underline ctermfg=255 ctermbg=238
 hi LineNr ctermfg=242
 hi MatchParen cterm=underline ctermfg=255 ctermbg=238
+hi Pmenu ctermfg=250 ctermbg=none
 hi Search cterm=underline ctermfg=255 ctermbg=238
 hi SpellBad cterm=bold ctermfg=255 ctermbg=9
 hi SpellCap cterm=bold ctermfg=255 ctermbg=56
 hi StatusLine cterm=bold ctermfg=7 ctermbg=none
 hi StatusLineNC cterm=none ctermfg=250 ctermbg=none
-hi Tabline ctermbg=none ctermfg=12
 hi TabLineFill cterm=none
+hi Tabline ctermbg=none ctermfg=12
 hi User1 ctermfg=255 ctermbg=none
 hi User2 ctermfg=10 ctermbg=none
 hi User3 ctermfg=243 ctermbg=none
@@ -91,6 +95,7 @@ Plug 'ervandew/supertab'
 Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf'
 Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'pangloss/vim-javascript'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-fugitive'
