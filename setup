@@ -20,6 +20,8 @@ case $(uname) in
       sudo apt install $item -y
     done
 
+    sudo apt install build-essential -y
+
     fish_path=$(which fish)
     ;;
   'Darwin')
