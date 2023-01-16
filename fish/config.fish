@@ -16,8 +16,8 @@ if status is-interactive
   eval (ssh-agent -c) >> /dev/null
 end
 
-if test -d ~/.config/fish/configs
-  for config_file in ~/.config/fish/configs/*
+if test -d ~/.config/fish/conf.d
+  for config_file in ~/.config/fish/conf.d/*
     source $config_file
   end
 end
