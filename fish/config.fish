@@ -1,6 +1,6 @@
 set fish_greeting
 
-set PATH /usr/local/bin/ /opt/homebrew/bin/ ~/.rbenv/bin $PATH
+fish_add_path /usr/local/bin/ /opt/homebrew/bin/ ~/.rbenv/bin source ~/.cargo/bin
 
 set -x EDITOR /usr/bin/nvim
 set -x FZF_DEFAULT_COMMAND "rg --files --follow --hidden --glob '!.git/*'"
