@@ -5,6 +5,7 @@ fish_add_path /usr/local/bin/ /opt/homebrew/bin/ ~/.rbenv/bin source ~/.cargo/bi
 set -x EDITOR /usr/bin/nvim
 set -x FZF_DEFAULT_COMMAND "rg --files --follow --hidden --glob '!.git/*'"
 set -x FZF_DEFAULT_OPTS "--reverse"
+set -x GPG_TTY (tty)
 
 if status is-interactive
 and not set -q TMUX
