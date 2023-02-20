@@ -13,7 +13,7 @@ and not set -q TMUX
 end
 
 if status is-interactive
-  source (rbenv init -|psub)
+  source ~/.asdf/asdf.fish
   eval (ssh-agent -c) >> /dev/null
 end
 
