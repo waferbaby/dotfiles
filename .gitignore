@@ -1,6 +1,8 @@
+.vim/
 Brewfile.lock.json
-fish/fishd*
+fish/completions
+fish/conf.d
 fish/fish_variables
+fish/fishd*
 nvim/autoload
 nvim/plugged
-.vim/
