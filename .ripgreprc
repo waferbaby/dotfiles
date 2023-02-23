@@ -1,1 +1,1 @@
---glob='!.DS_Store'
+--files --follow --hidden --glob '!.git/*' --glob='!.DS_Store'
