@@ -1,9 +1,9 @@
 set fish_greeting
 
-fish_add_path /usr/local/bin/ /opt/homebrew/bin/ ~/.rbenv/bin source ~/.cargo/bin
+fish_add_path /usr/local/bin/ /opt/homebrew/bin/ ~/.asdf/shims
 
 set -x EDITOR /usr/bin/env nvim
-set -x FZF_DEFAULT_COMMAND "rg $(more ~/.ripgreprc)"
+set -x FZF_DEFAULT_COMMAND "rg "(more ~/.ripgreprc)
 set -x FZF_DEFAULT_OPTS "--reverse"
 set -x GPG_TTY (tty)
 
