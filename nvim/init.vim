@@ -90,7 +90,6 @@ call plug#begin('~/.config/nvim/plugged')
 
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-bufferline'
-Plug 'evanleck/vim-svelte'
 Plug 'ervandew/supertab'
 Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf'
@@ -104,21 +103,13 @@ Plug 'w0rp/ale'
 
 call plug#end()
 
-function! GitBranch()
-  let branch = fugitive#Head()
-  if branch != ''
-    return branch
-  else
-    return ''
-endfunction
-
 if !exists('*SetStatusline') && has_key(g:plugs, 'vim-bufferline')
   function SetStatusline()
     let &statusline='%{bufferline#refresh_status()}'.bufferline#get_status_string()
 
     set statusline+=%=
     set statusline+=%#User1#
-    set statusline+=%{GitBranch()}
+    set statusline+=%{fugitive#Head()}
     set statusline+=%#User2#
     set statusline+=\ %y\ 
     set statusline+=%#User3#
