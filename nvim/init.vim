@@ -5,6 +5,8 @@ let g:bufferline_echo = 0
 let g:bufferline_fname_mod = ':p:.'
 let g:bufferline_show_bufnr = 0
 let g:fzf_layout = { 'window': { 'width': 100, 'height': 20 } }
+let g:rg_highlight = 1
+let g:rg_command = 'rg ' . substitute(system('more ~/.ripgreprc'), '\n', '', '')
 
 let loaded_netrwPlugin = 1
 
