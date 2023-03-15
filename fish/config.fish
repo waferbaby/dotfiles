@@ -3,7 +3,7 @@ set fish_greeting
 fish_add_path /usr/local/bin/ /opt/homebrew/bin/ ~/.asdf/shims
 
 set -x EDITOR /usr/bin/env nvim
-set -x FZF_DEFAULT_COMMAND "rg "(more ~/.ripgreprc)
+set -x FZF_DEFAULT_COMMAND "rg --files --hidden --follow --glob '!.git'"
 set -x FZF_DEFAULT_OPTS "--reverse"
 set -x GPG_TTY (tty)
 
