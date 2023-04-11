@@ -1,4 +1,5 @@
 let g:ale_fix_on_save = 1
+let g:ale_fixers = { 'ruby': ['prettier'] }
 let g:ale_linters = { 'ruby': ['rubocop'] }
 let g:ale_linters_explicit = 1
 let g:bufferline_echo = 0
@@ -98,6 +99,7 @@ Plug 'junegunn/fzf'
 Plug 'khaveesh/vim-fish-syntax'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'pangloss/vim-javascript'
+Plug 'prettier/vim-prettier'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails'
