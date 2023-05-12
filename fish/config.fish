@@ -1,6 +1,6 @@
 set fish_greeting
 
-fish_add_path /usr/local/bin/ /opt/homebrew/bin/ ~/.asdf/shims
+fish_add_path /usr/local/bin/ /opt/homebrew/bin/
 
 set -x EDITOR /usr/bin/env nvim
 set -x FZF_DEFAULT_COMMAND "rg --files --hidden --follow --glob '!.git'"
@@ -13,7 +13,6 @@ and not set -q TMUX
 end
 
 if status is-interactive
-  source ~/.asdf/asdf.fish
   eval (ssh-agent -c) >> /dev/null
 end
 
