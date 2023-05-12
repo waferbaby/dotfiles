@@ -11,6 +11,7 @@ let g:rg_command = 'rg --vimgrep'
 
 let loaded_netrwPlugin = 1
 
+set autochdir
 set autoread
 set autowriteall
 set clipboard=unnamed
@@ -67,8 +68,7 @@ nnoremap <leader>s :source $MYVIMRC<CR>
 nnoremap <leader>t :FZF<CR>
 nnoremap <leader>v :edit $MYVIMRC<CR>
 
-autocmd VimEnter * call SetStatusline()
-autocmd VimEnter * silent! cd %:p:h
+autocmd BufEnter * call SetStatusline()
 autocmd FileType crontab setlocal nobackup nowritebackup
 
 augroup markdown
@@ -112,8 +112,15 @@ if !exists('*SetStatusline') && has_key(g:plugs, 'vim-bufferline')
     let &statusline='%{bufferline#refresh_status()}'.bufferline#get_status_string()
 
     set statusline+=%=
-    set statusline+=%#User1#
-    set statusline+=%{fugitive#Head()}
+    set statusline+=%{getcwd()}
+
+    let g:branch = fugitive#Head()
+
+    if g:branch != ""
+      set statusline+=%#User1#
+      set statusline+=\ (%{g:branch})
+    endif
+
     set statusline+=%#User2#
     set statusline+=\ %y\ 
     set statusline+=%#User3#
