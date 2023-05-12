@@ -11,7 +11,6 @@ let g:rg_command = 'rg --vimgrep'
 
 let loaded_netrwPlugin = 1
 
-set autochdir
 set autoread
 set autowriteall
 set clipboard=unnamed
@@ -68,6 +67,7 @@ nnoremap <leader>s :source $MYVIMRC<CR>
 nnoremap <leader>t :FZF<CR>
 nnoremap <leader>v :edit $MYVIMRC<CR>
 
+autocmd VimEnter * silent! cd %:p:h
 autocmd BufEnter * call SetStatusline()
 autocmd FileType crontab setlocal nobackup nowritebackup
 
