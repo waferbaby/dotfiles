@@ -9,7 +9,7 @@ set -x GPG_TTY (tty)
 
 if status is-interactive
 and not set -q TMUX
-  exec tmux new -A -s "default"
+  tmux new -As0
 end
 
 if status is-interactive
