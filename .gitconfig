@@ -3,6 +3,14 @@
   st = status
   ci = commit
 
+[core]
+  editor = /usr/bin/env nvim
+  excludesfile = ~/.gitignore_global
+  pager = less -r
+
+[commit]
+  verbose = true
+
 [color]
   branch = auto
   diff = auto
@@ -24,22 +32,19 @@
   changed = green
   untracked = cyan
 
-[core]
-  editor = /usr/bin/env nvim
-  excludesfile = ~/.gitignore_global
-  pager = less -r
+[init]
+  defaultBranch = main
 
 [user]
   name = Daniel Bogan
   email = d@waferbaby.com
   signingkey = 648B78A1
 
+[pull]
+  rebase = true
+
 [push]
   default = simple
 
-[commit]
-	verbose = true
-[pull]
-	rebase = true
-[init]
-	defaultBranch = main
+[includeIf "gitdir:~/Development/work/"]
+  path = ~/.gitconfig-work
