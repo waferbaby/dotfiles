@@ -45,6 +45,7 @@
 
 [push]
   default = simple
+  autosetupremote = true
 
 [includeIf "gitdir:~/Development/work/"]
   path = ~/.gitconfig-work
