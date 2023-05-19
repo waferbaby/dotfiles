@@ -1,11 +1,12 @@
 #!/usr/bin/env sh
 
 # Symlink all the things.
-mkdir ~/.config/
+mkdir -p ~/.config/
 
 ln -sf ~/.dotfiles/fish/ ~/.config/
 ln -sf ~/.dotfiles/nvim/ ~/.config/
 ln -sf ~/.dotfiles/alacritty/ ~/.config/
+
 ln -sf ~/.dotfiles/.gitconfig ~/
 ln -sf ~/.dotfiles/.gitignore_global ~/
 ln -sf ~/.dotfiles/.ripgreprc ~/
@@ -37,13 +38,6 @@ case $(uname) in
       echo "${fish_path}" | sudo tee -a /etc/shells
     fi
 esac
-
-# Install asdf and its fish completions.
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf
-
-mkdir -p ~/.config/fish/completions
-ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
-~/.asdf/bin/asdf plugin add ruby
 
 # Install vim-plug.
 curl -fLo ~/.dotfiles/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
