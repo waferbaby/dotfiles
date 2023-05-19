@@ -1,6 +1,4 @@
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/cask-fonts"
 tap "homebrew/core"
 
 brew "fish"
@@ -9,4 +7,4 @@ brew "git"
 brew "neovim"
 brew "ripgrep"
 brew "tmux"
-cask "font-ibm-plex-mono"
+brew "yarn"
