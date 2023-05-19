@@ -72,6 +72,10 @@ autocmd VimEnter * silent! cd %:p:h
 autocmd BufEnter * call SetStatusline()
 autocmd FileType crontab setlocal nobackup nowritebackup
 
+augroup ruby
+  autocmd!
+  autocmd FileType ruby let b:ale_javascript_prettier_executable = 'rbprettier'
+
 augroup markdown
   autocmd!
   autocmd FileType markdown nnoremap <leader>l "xciw[<C-r>"][]<Esc>i
