@@ -1,7 +1,8 @@
 let g:ale_fix_on_save = 1
-let g:ale_fixers = { 'ruby': ['prettier'] }
+let g:ale_fixers = { 'ruby': ['rubocop'] }
 let g:ale_linters = { 'ruby': ['rubocop'] }
 let g:ale_linters_explicit = 1
+let g:ale_ruby_rubocop_executable = 'bundle'
 let g:bufferline_echo = 0
 let g:bufferline_fname_mod = ':p:.'
 let g:bufferline_show_bufnr = 0
