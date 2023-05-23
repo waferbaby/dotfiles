@@ -7,10 +7,8 @@ let g:bufferline_echo = 0
 let g:bufferline_fname_mod = ':p:.'
 let g:bufferline_show_bufnr = 0
 let g:fzf_layout = { 'window': { 'width': 100, 'height': 20 } }
-let g:gutentags_ctags_tagfile = '.tags'
-let g:rg_highlight = 1
 let g:rg_command = 'rg --vimgrep'
-let g:tagbar_wrap=1
+let g:rg_highlight = 1
 
 let loaded_netrwPlugin = 1
 
@@ -71,40 +69,20 @@ nnoremap <leader>t :FZF<CR>
 nnoremap <leader>v :edit $MYVIMRC<CR>
 
 autocmd BufEnter * call SetStatusline()
-autocmd FileType crontab setlocal nobackup nowritebackup
-autocmd FileType ruby let b:ale_javascript_prettier_executable = 'rbprettier'
 autocmd VimEnter * silent! cd %:p:h
-autocmd VimEnter * nested :TagbarOpen
-
-augroup markdown
-  autocmd!
-  autocmd BufNew,BufNewFile,BufRead *.md,*.markdown :set nonu
-
-  autocmd FileType markdown nnoremap <leader>L "xciw[<C-r>"]()<Esc>i
-  autocmd FileType markdown nnoremap <leader>b "xciw**<C-r>"**<Esc>
-  autocmd FileType markdown nnoremap <leader>i "xciw_<C-r>"_<Esc>
-  autocmd FileType markdown nnoremap <leader>k di(c%[]<Esc>i
-  autocmd FileType markdown nnoremap <leader>l "xciw[<C-r>"][]<Esc>i
-  autocmd FileType markdown vnoremap <leader>L "xc[<C-r>"]()<Esc>i
-  autocmd FileType markdown vnoremap <leader>b "xc**<C-r>"**<Esc>
-  autocmd FileType markdown vnoremap <leader>i "xc_<C-r>"_<Esc>
-  autocmd FileType markdown vnoremap <leader>l "xc[<C-r>"][]<Esc>i
-augroup end
 
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-bufferline'
-Plug 'ervandew/supertab'
 Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf'
-Plug 'ludovicchabant/vim-gutentags'
-Plug 'pangloss/vim-javascript'
-Plug 'preservim/tagbar'
-Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rails'
+Plug 'tomtom/tcomment_vim'
 Plug 'w0rp/ale'
+
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'tpope/vim-rails', { 'for': 'ruby' }
 
 call plug#end()
 
