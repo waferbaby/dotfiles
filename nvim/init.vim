@@ -10,6 +10,7 @@ let g:fzf_layout = { 'window': { 'width': 100, 'height': 20 } }
 let g:gutentags_ctags_tagfile = '.tags'
 let g:rg_highlight = 1
 let g:rg_command = 'rg --vimgrep'
+let g:tagbar_wrap=1
 
 let loaded_netrwPlugin = 1
 
@@ -73,6 +74,7 @@ autocmd BufEnter * call SetStatusline()
 autocmd FileType crontab setlocal nobackup nowritebackup
 autocmd FileType ruby let b:ale_javascript_prettier_executable = 'rbprettier'
 autocmd VimEnter * silent! cd %:p:h
+autocmd VimEnter * nested :TagbarOpen
 
 augroup markdown
   autocmd!
