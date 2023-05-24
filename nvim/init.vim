@@ -1,5 +1,5 @@
 let g:ale_fix_on_save = 1
-let g:ale_fixers = { 'ruby': ['rubocop'] }
+let g:ale_fixers = { 'ruby': ['prettier'] }
 let g:ale_linters = { 'ruby': ['rubocop'] }
 let g:ale_linters_explicit = 1
 let g:ale_ruby_rubocop_executable = 'bundle'
@@ -77,6 +77,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-bufferline'
 Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tomtom/tcomment_vim'
 Plug 'w0rp/ale'
