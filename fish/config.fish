@@ -3,6 +3,7 @@ set fish_greeting
 fish_add_path ~/.rbenv/shims /usr/local/bin/ /opt/homebrew/bin/
 
 set -x EDITOR /usr/bin/env nvim
+set -x BUNDLE_GEMFILE "Gemfile-dev"
 set -x FZF_DEFAULT_COMMAND "rg --files --hidden --follow --glob '!.git'"
 set -x FZF_DEFAULT_OPTS "--reverse"
 set -x GPG_TTY (tty)
