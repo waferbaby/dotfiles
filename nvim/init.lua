@@ -1,4 +1,5 @@
+require "options"
 require "autocmd"
+require "colours"
 require "plugins"
 require "keymap"
-require "options"
