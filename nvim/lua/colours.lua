@@ -1,6 +1,6 @@
 vim.api.nvim_set_hl(0, "Error", { cterm = bold, ctermfg = 255, ctermbg = 9 })
 vim.api.nvim_set_hl(0, "IncSearch", { cterm = underline, ctermfg = 255, ctermbg = 238})
-vim.api.nvim_set_hl(0, "LineNr", { ctermfg = 242})
+vim.api.nvim_set_hl(0, "LineNr", { ctermfg = 242 })
 vim.api.nvim_set_hl(0, "MatchParen", { cterm = underline, ctermfg = 255, ctermbg = 238 })
 vim.api.nvim_set_hl(0, "Pmenu", { ctermfg = 250, ctermbg = none })
 vim.api.nvim_set_hl(0, "Search", { cterm = underline, ctermfg = 255, ctermbg = 238 })
