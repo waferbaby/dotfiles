@@ -1,9 +1,9 @@
 vim.opt.autoread = true
 vim.opt.autowriteall = true
 vim.opt.clipboard = "unnamed"
+vim.opt.cmdheight=0
 vim.opt.encoding = "utf8"
 vim.opt.expandtab = true
-vim.opt.exrc = true
 vim.opt.foldenable = false
 vim.opt.hlsearch = false
 vim.opt.ignorecase = true
@@ -13,6 +13,7 @@ vim.opt.number = true
 vim.opt.secure = true
 vim.opt.shiftwidth = 2
 vim.opt.shortmess:append("I")
+vim.opt.showtabline = 2
 vim.opt.smartcase = true
 vim.opt.smarttab = true
 vim.opt.softtabstop = 2
