@@ -1,5 +1,5 @@
-require "setup"
 require "keymap"
+require "plug"
 require "options"
 require "autocmd"
 require "colours"
