@@ -1,7 +1,11 @@
 return {
   "nvim-telescope/telescope.nvim",
   dependencies = { 'nvim-lua/plenary.nvim' },
-  opts = function() 
+  keys = {
+    { "<leader>t", function() require('telescope.builtin').find_files{} end },
+    { "<leader>f", function() require('telescope.builtin').live_grep{} end }
+  },
+  opts = function()
     return {
       defaults = {
         preview = false,
