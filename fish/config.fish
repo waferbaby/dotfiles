@@ -8,6 +8,8 @@ set -x FZF_DEFAULT_COMMAND "rg --files --hidden --follow --glob '!.git'"
 set -x FZF_DEFAULT_OPTS "--reverse"
 set -x GPG_TTY (tty)
 
+alias plug="cd ~/.dotfiles/nvim/lua/plugins && nvim ."
+
 if status is-interactive
 and not set -q TMUX
   tmux new -As0
