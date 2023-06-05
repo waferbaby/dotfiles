@@ -13,7 +13,6 @@ vim.opt.number = true
 vim.opt.secure = true
 vim.opt.shiftwidth = 2
 vim.opt.shortmess:append("I")
-vim.opt.showtabline = 2
 vim.opt.smartcase = true
 vim.opt.smarttab = true
 vim.opt.softtabstop = 2
