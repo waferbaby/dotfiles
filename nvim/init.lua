@@ -1,6 +1,5 @@
 require "keymap"
-require "plug"
 require "options"
+require "plug"
 require "autocmd"
 require "colours"
-require "statusline"
