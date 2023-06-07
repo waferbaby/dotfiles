@@ -3,7 +3,7 @@ return {
   dependencies = { 'nvim-lua/plenary.nvim' },
   keys = {
     { "<leader>t", function() require('telescope.builtin').find_files{} end },
-    { "<leader>f", function() require('telescope.builtin').live_grep{} end }
+    { "<leader>g", function() require('telescope.builtin').git_status{} end }
   },
   opts = function()
     return {
@@ -18,7 +18,7 @@ return {
 
       pickers = {
         find_files = { theme = "dropdown" },
-        live_grep = { theme = "dropdown" }
+        git_status = { theme = "dropdown" }
       }
     }
   end
