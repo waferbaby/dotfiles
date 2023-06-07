@@ -8,6 +8,7 @@ return {
       log_level = vim.log.levels.WARN,
       filetype = {
         ["*"] = { require("formatter.filetypes.any").remove_trailing_whitespace },
+        javascript = { require("formatter.filetypes.javascript").prettier },
         ruby = {
           function()
             return {
