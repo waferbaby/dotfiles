@@ -1,5 +1,6 @@
-require "keymap"
+require "keymaps"
 require "options"
 require "plug"
 require "autocmd"
 require "colours"
+require "boot"
