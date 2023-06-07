@@ -17,3 +17,5 @@ vim.opt.smartcase = true
 vim.opt.smarttab = true
 vim.opt.softtabstop = 2
 vim.opt.tabstop = 2
+
+vim.diagnostic.config({ virtual_text = false })
