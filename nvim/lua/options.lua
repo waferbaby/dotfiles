@@ -5,6 +5,7 @@ vim.opt.cmdheight=0
 vim.opt.encoding = "utf8"
 vim.opt.expandtab = true
 vim.opt.foldenable = false
+vim.opt.grepprg = "rg --vimgrep --no-heading --smart-case"
 vim.opt.hlsearch = false
 vim.opt.ignorecase = true
 vim.opt.incsearch = true
