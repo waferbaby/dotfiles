@@ -1,5 +1,6 @@
 vim.opt.autoread = true
 vim.opt.autowriteall = true
+vim.opt.background = "dark"
 vim.opt.clipboard = "unnamed"
 vim.opt.cmdheight=0
 vim.opt.encoding = "utf8"
