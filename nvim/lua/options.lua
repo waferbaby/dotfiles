@@ -5,6 +5,7 @@ vim.opt.clipboard = "unnamed"
 vim.opt.cmdheight=0
 vim.opt.encoding = "utf8"
 vim.opt.expandtab = true
+vim.opt.exrc = true
 vim.opt.foldenable = false
 vim.opt.grepprg = "rg --vimgrep --smart-case --hidden --follow"
 vim.opt.hlsearch = false
