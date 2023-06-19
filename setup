@@ -6,7 +6,7 @@ dotfiles=$(pwd)
 mkdir -p ~/.config/
 
 ln -sf $(ls -d $dotfiles/source/.config/*) ~/.config/
-ln -sf $(find $dotfiles/source/ -maxdepth 1 -name '.*' -type f) ~/
+ln -sf $(find $dotfiles/source -maxdepth 1 -name '.*' -type f) ~/
 
 # Install the base packages.
 case $(uname) in
