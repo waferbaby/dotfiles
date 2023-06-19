@@ -1,35 +1,39 @@
 #!/usr/bin/env sh
 
+source=$(pwd)
+
 # Symlink all the things.
 mkdir -p ~/.config/
 
-ln -sf ~/.dotfiles/fish/ ~/.config/
-ln -sf ~/.dotfiles/nvim/ ~/.config/
-ln -sf ~/.dotfiles/alacritty/ ~/.config/
+ln -sf $source/fish/ ~/.config/
+ln -sf $source/nvim/ ~/.config/
 
-ln -sf ~/.dotfiles/.gitconfig ~/
-ln -sf ~/.dotfiles/.gitignore_global ~/
-ln -sf ~/.dotfiles/.ripgreprc ~/
-ln -sf ~/.dotfiles/.tmux.conf ~/
+ln -sf $source/.gitconfig ~/
+ln -sf $source/.gitignore_global ~/
+ln -sf $source/.irbrc ~/
+ln -sf $source/.ripgreprc ~/
+ln -sf $source/.tmux.conf ~/
 
 # Install the base packages.
 case $(uname) in
   'Linux')
     sudo apt update
+    sudo apt install build-essential -y
 
-    for item in $(sed -n -E "s/brew \"(.+)\"/\1/p" ~/.dotfiles/Brewfile); do
+    for item in $(sed -n -E "s/brew \"(.+)\"/\1/p" $source/Brewfile); do
       sudo apt install $item -y
     done
-
-    sudo apt install build-essential -y
 
     fish_path=$(which fish)
     ;;
   'Darwin')
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    if ! command -v brew &> /dev/null; then
+      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    fi
+
     PATH=$PATH:/opt/homebrew/bin:/usr/local/bin
 
-    brew bundle --file=~/.dotfiles/Brewfile
+    brew bundle --file=$source/Brewfile
 
     brew_prefix=$(brew config | sed -n -E "s/HOMEBREW_PREFIX: (.+)/\1/p")
     fish_path="${brew_prefix}/bin/fish"
@@ -38,13 +42,6 @@ case $(uname) in
       echo "${fish_path}" | sudo tee -a /etc/shells
     fi
 esac
-
-# Install vim-plug and plugins.
-curl -fLo ~/.dotfiles/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-nvim -E -c PlugInstall -c q -c q
-
-# Install prettier and its Ruby friend.
-yarn global add prettier @prettier/plugin-ruby
 
 # Switch to fish
 chsh -s $fish_path
