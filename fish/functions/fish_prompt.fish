@@ -11,7 +11,7 @@ function fish_prompt
   set_color normal
   printf '@'
   set_color $fish_color_host
-  printf '%s ' (hostname|cut -d . -f 1)
+  printf '%s ' (hostname)
   set_color normal
   set_color $fish_color_cwd
   printf '%s' (prompt_pwd)
