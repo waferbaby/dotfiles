@@ -1,18 +1,12 @@
 #!/usr/bin/env sh
 
-source=$(pwd)
+dotfiles=$(pwd)
 
 # Symlink all the things.
 mkdir -p ~/.config/
 
-ln -sf $source/fish/ ~/.config/
-ln -sf $source/nvim/ ~/.config/
-
-ln -sf $source/.gitconfig ~/
-ln -sf $source/.gitignore_global ~/
-ln -sf $source/.irbrc ~/
-ln -sf $source/.ripgreprc ~/
-ln -sf $source/.tmux.conf ~/
+ln -sf $(ls -d $dotfiles/source/.config/*) ~/.config/
+ln -sf $(find $dotfiles/source/ -maxdepth 1 -name '.*' -type f) ~/
 
 # Install the base packages.
 case $(uname) in
@@ -20,7 +14,7 @@ case $(uname) in
     sudo apt update
     sudo apt install build-essential -y
 
-    for item in $(sed -n -E "s/brew \"(.+)\"/\1/p" $source/Brewfile); do
+    for item in $(sed -n -E "s/brew \"(.+)\"/\1/p" $dotfiles/Brewfile); do
       sudo apt install $item -y
     done
 
@@ -33,7 +27,7 @@ case $(uname) in
 
     PATH=$PATH:/opt/homebrew/bin:/usr/local/bin
 
-    brew bundle --file=$source/Brewfile
+    brew bundle --file=$dotfiles/Brewfile
 
     brew_prefix=$(brew config | sed -n -E "s/HOMEBREW_PREFIX: (.+)/\1/p")
     fish_path="${brew_prefix}/bin/fish"
