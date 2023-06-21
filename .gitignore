@@ -1,7 +1,4 @@
 .vim/
 Brewfile.lock.json
-fish/completions
-fish/conf.d
-fish/fish_variables
-fish/fishd*
-nvim/lazy-lock.json
+source/.config/fish/conf.d/
+source/.config/nvim/lazy-lock.json
