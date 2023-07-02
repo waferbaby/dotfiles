@@ -1,13 +1,19 @@
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<C-Down>", "<CMD>NavigatorDown<CR>")
-vim.keymap.set("n", "<C-Left>", "<CMD>NavigatorLeft<CR>")
-vim.keymap.set("n", "<C-Right>", "<CMD>NavigatorRight<CR>")
-vim.keymap.set("n", "<C-Up>", "<CMD>NavigatorUp<CR>")
-
 vim.keymap.set("n", "<leader>/", ":%!sort -R<CR>")
 vim.keymap.set("n", "<leader>[", ":bp<cr>")
 vim.keymap.set("n", "<leader>]", ":bn<cr>")
 vim.keymap.set("n", "<leader>f", ":Rg ")
 vim.keymap.set("n", "<leader>j", "vipJ")
 vim.keymap.set("n", "<leader>v", ":edit $MYVIMRC<cr>")
+
+-- Navigator
+
+vim.keymap.set("n", "<C-Down>", function() require('Navigator').down() end)
+vim.keymap.set("n", "<C-Left>", function() require('Navigator').left() end)
+vim.keymap.set("n", "<C-Right>", function() require('Navigator').right() end)
+vim.keymap.set("n", "<C-Up>", function() require('Navigator').up() end)
+
+-- Gitsigns
+
+vim.keymap.set('n', 'gb', function() require("gitsigns").blame_line{} end)
