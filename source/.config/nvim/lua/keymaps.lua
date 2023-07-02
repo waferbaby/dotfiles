@@ -1,10 +1,11 @@
 vim.g.mapleader = " "
 
+vim.keymap.set("n", "<C-Down>", "<CMD>NavigatorDown<CR>")
+vim.keymap.set("n", "<C-Left>", "<CMD>NavigatorLeft<CR>")
+vim.keymap.set("n", "<C-Right>", "<CMD>NavigatorRight<CR>")
+vim.keymap.set("n", "<C-Up>", "<CMD>NavigatorUp<CR>")
+
 vim.keymap.set("n", "<leader>/", ":%!sort -R<CR>")
-vim.keymap.set("n", "<leader><Down>", "<C-W>j")
-vim.keymap.set("n", "<leader><Left>", "<C-W>h")
-vim.keymap.set("n", "<leader><Right>", "<C-W>l")
-vim.keymap.set("n", "<leader><Up>", "<C-W>k")
 vim.keymap.set("n", "<leader>[", ":bp<cr>")
 vim.keymap.set("n", "<leader>]", ":bn<cr>")
 vim.keymap.set("n", "<leader>f", ":Rg ")
