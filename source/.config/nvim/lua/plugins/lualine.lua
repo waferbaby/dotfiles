@@ -29,27 +29,20 @@ return {
           fmt = function(str) return str:sub(1,1) end
         }
       },
-      lualine_b = { "branch" },
-      lualine_c = {
+      lualine_b = {
         {
-          "buffers",
-          symbols = {
-            alternate_file = ''
-          },
-          buffers_color = {
-            inactive = "Comment"
-          },
-          fmt = function(buffer, options)
-            return "[" .. buffer .. "]"
-          end
+          "branch",
+          fmt = function(str) return str .. " >" end
+        },
+        { "filename" },
+        {
+         "filetype",
+          color = "Identifier",
+          fmt = function(str) return str == "" or "(" .. str .. ")" end
         }
       },
-      lualine_x = {
-        {
-          "filetype",
-          color = "Identifier"
-        }
-      },
+      lualine_c = {},
+      lualine_x = {},
       lualine_y = { "progress" },
       lualine_z = { "location" }
     },
