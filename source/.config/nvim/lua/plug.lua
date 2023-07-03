@@ -16,5 +16,21 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup("plugins", {
   install = {
     colorscheme = { "default" }
+  },
+  ui = {
+    icons = {
+      cmd = "⌘",
+      config = "🛠",
+      event = "📅",
+      ft = "📂",
+      init = "⚙",
+      keys = "🗝",
+      plugin = "🔌",
+      runtime = "💻",
+      source = "📄",
+      start = "🚀",
+      task = "📌",
+      lazy = "💤 ",
+    },
   }
 })
