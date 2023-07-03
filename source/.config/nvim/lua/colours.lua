@@ -1,7 +1,7 @@
 vim.api.nvim_set_hl(0, "Comment", { fg = 242 })
 vim.api.nvim_set_hl(0, "DiffAdd", { bg = none, ctermfg = 2, fg = 2 })
 vim.api.nvim_set_hl(0, "DiffChange", { bg = none, ctermfg = 12, fg = 12 })
-vim.api.nvim_set_hl(0, "DiffDelete", { bg = none, ctermfg = 6, fg = 6 })
+vim.api.nvim_set_hl(0, "DiffDelete", { bg = none, ctermfg = 9, fg = 9 })
 vim.api.nvim_set_hl(0, "Error", { bold = true, ctermfg = 255, ctermbg = 9, fg = 255, bg = 9 })
 vim.api.nvim_set_hl(0, "IncSearch", { underline = true, ctermfg = 255, ctermbg = 238, fg = 255, bg = 238})
 vim.api.nvim_set_hl(0, "LineNr", { ctermfg = 242, fg = 242 })
