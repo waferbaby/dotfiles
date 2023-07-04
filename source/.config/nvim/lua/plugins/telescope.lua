@@ -20,7 +20,7 @@ return {
       pickers = {
         find_files = {
           theme = "dropdown",
-          find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" }
+          find_command = { "rg", "--files", "--hidden" }
         },
         git_status = { theme = "dropdown" }
       }
