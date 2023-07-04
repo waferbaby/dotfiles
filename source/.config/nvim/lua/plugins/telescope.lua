@@ -14,8 +14,7 @@ return {
 
       pickers = {
         find_files = {
-          theme = "dropdown",
-          no_ignore = true
+          theme = "dropdown"
         },
         git_status = { theme = "dropdown" }
       }
