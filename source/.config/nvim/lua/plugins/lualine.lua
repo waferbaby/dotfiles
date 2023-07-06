@@ -32,7 +32,7 @@ return {
       lualine_b = {
         {
           "branch",
-          fmt = function(str) return str .. " >" end
+          fmt = function(str) return str == "" or str .. " >" end
         },
         { "filename" },
         {
