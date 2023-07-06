@@ -16,7 +16,8 @@ return {
         find_files = {
           theme = "dropdown"
         },
-        git_status = { theme = "dropdown" }
+        git_status = { theme = "dropdown" },
+        buffers = { theme = "dropdown" }
       }
     }
   end
