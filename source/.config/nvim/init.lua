@@ -1,5 +1,5 @@
-require "keymaps"
-require "options"
-require "plug"
-require "commands"
-require "colours"
+require("keymaps")
+require("options")
+require("plug")
+require("commands")
+require("colours")

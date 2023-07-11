@@ -1,4 +1,4 @@
 return {
-  "numtostr/navigator.nvim",
-  config = true
+	"numtostr/navigator.nvim",
+	config = true,
 }
