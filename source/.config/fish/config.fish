@@ -5,8 +5,6 @@ fish_add_path ~/.rbenv/shims /usr/local/bin/ /opt/homebrew/bin/
 set -x EDITOR /usr/bin/env nvim
 set -x GPG_TTY (tty)
 
-alias plug="cd ~/.dotfiles/nvim/lua/plugins && nvim ."
-
 if status is-interactive
 and not set -q TMUX
   tmux new -As0
