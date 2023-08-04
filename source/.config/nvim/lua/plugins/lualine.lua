@@ -38,7 +38,17 @@ return {
 						return str == "" or str .. " >"
 					end,
 				},
-				{ "filename" },
+				{
+					"buffers",
+					symbols = { alternate_file = "" },
+					buffers_color = {
+						active = "StatusLine",
+						inactive = "StatusLineNC",
+					},
+					fmt = function(str)
+						return "[" .. str .. "]"
+					end,
+				},
 				{
 					"filetype",
 					color = "Identifier",
