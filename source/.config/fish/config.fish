@@ -3,6 +3,7 @@ set fish_greeting
 fish_add_path ~/.rbenv/shims /usr/local/bin/ /opt/homebrew/bin/
 
 set -x EDITOR /usr/bin/env nvim
+set -x RIPGREP_CONFIG_PATH ~/.ripgreprc
 set -x GPG_TTY (tty)
 
 if status is-interactive
