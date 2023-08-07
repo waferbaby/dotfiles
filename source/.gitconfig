@@ -51,3 +51,5 @@
   path = ~/.gitconfig-work
 [diff]
 	compactionHeuristic = true
+[fetch]
+	prune = true
