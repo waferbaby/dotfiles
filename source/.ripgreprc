@@ -1,1 +1,6 @@
---vimgrep --files --follow --hidden --smart-case --glob '!.git/*' --glob='!.DS_Store' --glob='!node_modules' --glob='!vendor/**'
+--hidden
+--smart-case
+--glob=!.git/*
+--glob=!.DS_Store
+--glob=!node_modules
+--glob=!vendor/**
