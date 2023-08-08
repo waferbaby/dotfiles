@@ -27,5 +27,5 @@ function is_git_directory
 end
 
 function pick_git_branch
-  git branch -- | fzf | tr -d ' '
+  git branch -- | fzf --margin 30% --border | tr -d ' '
 end
