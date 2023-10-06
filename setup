@@ -5,8 +5,8 @@ dotfiles=$(pwd)
 # Symlink all the things.
 mkdir -p ~/.config/
 
-ln -sf $(ls -d $dotfiles/source/.config/*) ~/.config/
-ln -sf $(find $dotfiles/source -maxdepth 1 -name '.*' -type f) ~/
+ln -sf $(find $dotfiles/.config -mindepth 1 -maxdepth 1 -type d) ~/.config/
+ln -sf $(find $dotfiles/ -maxdepth 1 -name '.*' -type f) ~/
 
 # Install the base packages.
 case $(uname) in
