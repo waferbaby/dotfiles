@@ -1,6 +1,6 @@
 return {
 	"neovim/nvim-lspconfig",
 	init = function()
-		require("lspconfig").ruby_ls.setup({})
+		require("lspconfig").rubocop.setup({})
 	end,
 }

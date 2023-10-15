@@ -13,11 +13,15 @@ return {
 				ruby = {
 					function()
 						return {
-							exe = "stree",
+							exe = "rubocop",
 							args = {
-								"format",
-								"--print-width=100",
-								util.escape_path(util.get_current_buffer_file_path()),
+								"--fix-layout",
+								"--autocorrect-all",
+								"--stdin",
+								util.escape_path(util.get_current_buffer_file_name()),
+								"--format",
+								"files",
+								"--stderr",
 							},
 							stdin = true,
 						}
