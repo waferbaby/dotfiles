@@ -19,9 +19,10 @@ vim.opt.number = true
 vim.opt.secure = true
 vim.opt.shiftwidth = 2
 vim.opt.shortmess:append("I")
+vim.opt.signcolumn = "yes"
 vim.opt.smartcase = true
 vim.opt.smarttab = true
 vim.opt.softtabstop = 2
 vim.opt.tabstop = 2
 
-vim.diagnostic.config({ virtual_text = false })
+vim.diagnostic.config({ virtual_text = true, highlight = true, underline = true })
