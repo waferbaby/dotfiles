@@ -4,3 +4,4 @@
 --glob=!.DS_Store
 --glob=!node_modules
 --glob=!vendor/**
+--glob=!app/assets/javascript/**
