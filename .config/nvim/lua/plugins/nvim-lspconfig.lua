@@ -3,6 +3,6 @@ return {
 	init = function()
     local lspconfig = require('lspconfig')
     
-    lspconfig.standardrb.setup({})
+    lspconfig.rubocop.setup({})
 	end,
 }
