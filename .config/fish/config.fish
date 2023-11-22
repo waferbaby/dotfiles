@@ -6,6 +6,9 @@ set -x EDITOR /usr/bin/env nvim
 set -x RIPGREP_CONFIG_PATH ~/.ripgreprc
 set -x GPG_TTY (tty)
 
+alias bx="bundle exec"
+alias bxr="bx rails"
+
 if status is-interactive
 and not set -q TMUX
   tmux new -As0
