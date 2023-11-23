@@ -2,7 +2,7 @@ vim.api.nvim_create_autocmd("VimEnter", { pattern = "*", command = "silent! cd %
 vim.api.nvim_create_autocmd(
   "BufWritePre", {
     pattern = "*",
-    callback = function(args) vim.lsp.buf.format() end,
+    command = "silent! lua vim.lsp.buf.format()"
   }
 )
 
