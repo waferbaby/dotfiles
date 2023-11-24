@@ -37,5 +37,15 @@ case $(uname) in
     fi
 esac
 
+# Install asdf and plugins
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+
+mkdir -p ~/.config/fish/completions
+ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
+source ~/.asdf/asdf.fish
+
+asdf add ruby
+asdf add nodejs
+
 # Switch to fish
 chsh -s $fish_path
