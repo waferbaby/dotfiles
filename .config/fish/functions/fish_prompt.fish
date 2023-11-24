@@ -7,7 +7,7 @@ function fish_prompt
   set last_status $status
 
   set_color $fish_color_user
-  printf '%s' (whoami)
+  printf '%s' (string shorten -m 1 -c '' (whoami))
   set_color normal
   printf '@'
   set_color $fish_color_host
@@ -16,7 +16,7 @@ function fish_prompt
   set_color $fish_color_cwd
   printf '%s' (prompt_pwd)
   set_color $fish_color_branch
-  printf '%s' (__fish_git_prompt)
+  printf '%s' (string shorten -m 20 -c '…)' (__fish_git_prompt))
   set_color normal
   printf ' > '
 end
