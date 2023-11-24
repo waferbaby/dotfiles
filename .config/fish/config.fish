@@ -16,7 +16,7 @@ end
 
 if status is-interactive
   eval (ssh-agent -c) >> /dev/null
-  rbenv init - fish | source
+  source ~/.asdf/asdf.fish
 end
 
 if test -d ~/.config/fish/conf.d
