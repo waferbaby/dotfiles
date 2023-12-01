@@ -44,8 +44,8 @@ mkdir -p ~/.config/fish/completions
 ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
 source ~/.asdf/asdf.fish
 
-asdf add ruby
-asdf add nodejs
+asdf plugin add ruby
+asdf plugin add nodejs
 
 # Switch to fish
 chsh -s $fish_path
