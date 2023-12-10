@@ -8,6 +8,8 @@ set -x GPG_TTY (tty)
 
 alias bx="bundle exec"
 alias bxr="bx rails"
+alias bxrs="bx rspec"
+alias bxrc="bxr c"
 
 if status is-interactive
 and not set -q TMUX
