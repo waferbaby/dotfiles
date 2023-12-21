@@ -1,4 +1,4 @@
-function gb
+function gbd
   if ! is_git_directory
     return
   end
@@ -6,6 +6,6 @@ function gb
   set branch $(pick_git_branch)
 
   if test -n "$branch"
-    git checkout $branch
+    git branch -d $branch
   end
 end
