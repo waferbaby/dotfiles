@@ -1,5 +1,6 @@
-.vim/
-Brewfile.lock.json
+.config/fish/completions/
 .config/fish/conf.d/
 .config/fish/fish_variables
 .config/nvim/lazy-lock.json
+.vim/
+Brewfile.lock.json
