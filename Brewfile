@@ -1,11 +1,10 @@
 tap "homebrew/bundle"
 tap "homebrew/core"
 
+brew "asdf"
 brew "fish"
-brew "fzf"
 brew "git"
 brew "neovim"
-brew "rbenv"
 brew "ripgrep"
 brew "tmux"
 brew "yarn"
