@@ -1,3 +1,3 @@
 function pick_git_branch
-  git branch --sort=-committerdate -- | fzf --margin 15% --border | tr -d ' '
+  git branch --sort=-committerdate -- | fzf --margin 15% --border -m | tr -d ' '
 end
