@@ -1,0 +1,12 @@
+[font]
+size = 15.0
+
+[font.normal]
+family = "Dank Mono"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[window]
+startup_mode = "Fullscreen"
