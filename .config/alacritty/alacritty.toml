@@ -1,5 +1,9 @@
+import = [
+"~/.config/alacritty/aura-theme.yml"
+]
+
 [font]
-size = 15.0
+size = 14.0
 
 [font.normal]
 family = "Dank Mono"
