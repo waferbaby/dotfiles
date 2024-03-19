@@ -6,6 +6,6 @@ function gbd
   set branch $(pick_git_branch)
 
   if test -n "$branch"
-    git branch -d $branch
+    git branch -D $branch
   end
 end
