@@ -16,15 +16,8 @@ return {
         borderchars = { "─", "", "", "", "", "", "", "" },
         layout_strategy = "bottom_pane",
         layout_config = {
-          height = 8,
+          height = 0.5,
         },
-      },
-
-      pickers = {
-        live_grep = { theme = "dropdown" },
-        find_files = { theme = "dropdown" },
-        git_status = { theme = "dropdown" },
-        buffers = { theme = "dropdown" },
       },
     }
   end,
