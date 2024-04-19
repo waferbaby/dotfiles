@@ -5,11 +5,12 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>/", ":%!sort -R<CR>")
 vim.keymap.set("n", "<leader>[", ":bp<cr>")
 vim.keymap.set("n", "<leader>]", ":bn<cr>")
-vim.keymap.set("n", "<leader>f", ":Rg ")
 vim.keymap.set("n", "<leader>j", "vipJ")
 
 -- Telescope
-
+vim.keymap.set("n", "<leader>f", function()
+	require("telescope.builtin").live_grep({})
+end)
 vim.keymap.set("n", "<leader>g", function()
 	require("telescope.builtin").git_status({})
 end)

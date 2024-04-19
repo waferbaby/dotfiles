@@ -21,6 +21,7 @@ return {
       },
 
       pickers = {
+        live_grep = { theme = "dropdown" },
         find_files = { theme = "dropdown" },
         git_status = { theme = "dropdown" },
         buffers = { theme = "dropdown" },
