@@ -1,3 +1,5 @@
+vim.cmd.colorscheme('oxocarbon')
+
 vim.api.nvim_set_hl(0, "Comment", { ctermfg = 242 })
 vim.api.nvim_set_hl(0, "DiffAdd", { ctermfg = 2, ctermbg = none })
 vim.api.nvim_set_hl(0, "DiffChange", { ctermfg = 12, ctermbg = none })
