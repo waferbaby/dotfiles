@@ -42,8 +42,8 @@ return {
 					"buffers",
 					symbols = { alternate_file = "" },
 					buffers_color = {
-						active = "StatusLine",
-						inactive = "StatusLineNC",
+						active = "BufferSelected",
+						inactive = "BufferUnselected",
 					},
 					fmt = function(str)
 						return "[" .. str .. "]"
