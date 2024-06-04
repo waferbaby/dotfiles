@@ -1,3 +1,5 @@
+vim.cmd.colorscheme('vim')
+
 vim.api.nvim_set_hl(0, "Comment", { ctermfg = 200 })
 vim.api.nvim_set_hl(0, "DiffAdd", { ctermfg = 2, ctermbg = none })
 vim.api.nvim_set_hl(0, "DiffChange", { ctermfg = 12, ctermbg = none })
@@ -17,5 +19,5 @@ vim.api.nvim_set_hl(0, "VertSplit", { ctermfg = 237, ctermbg = none })
 
 -- Custom entries
 
-vim.api.nvim_set_hl(0, "BufferSelected", { bold = true, underline = true })
+vim.api.nvim_set_hl(0, "BufferSelected", { bold = true })
 vim.api.nvim_set_hl(0, "BufferUnselected", { ctermfg = 20 })
