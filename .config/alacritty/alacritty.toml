@@ -1,6 +1,5 @@
-import = [
-"~/.config/alacritty/aura-theme.yml"
-]
+[env]
+term = "xterm-256color"
 
 [font]
 size = 14.0
