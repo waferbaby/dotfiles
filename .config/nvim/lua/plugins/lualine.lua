@@ -45,9 +45,6 @@ return {
 						active = "BufferSelected",
 						inactive = "BufferUnselected",
 					},
-					fmt = function(str)
-						return "[" .. str .. "]"
-					end,
 				},
 				{
 					"filetype",
