@@ -1,14 +1,6 @@
 vim.g.loaded_netrw = true
 vim.g.loaded_netrwPlugin = true
 
-vim.diagnostic.config({
-  virtual_text = true,
-  signs = true,
-  underline = true,
-  update_in_insert = true,
-  severity_sort = false,
-})
-
 vim.opt.autoread = true
 vim.opt.autowriteall = true
 vim.opt.background = "dark"
