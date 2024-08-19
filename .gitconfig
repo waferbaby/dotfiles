@@ -2,6 +2,7 @@
   co = checkout
   st = status
   ci = commit
+  root = !pwd -P
 
 [core]
   editor = /usr/bin/env nvim
@@ -50,6 +51,6 @@
 [includeIf "gitdir:~/Development/work/"]
   path = ~/.gitconfig-work
 [diff]
-	compactionHeuristic = true
+  compactionHeuristic = true
 [fetch]
-	prune = true
+  prune = true
