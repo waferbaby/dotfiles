@@ -1,10 +1,11 @@
 set fish_greeting
 
-fish_add_path ~/.rbenv/shims /usr/local/bin/ /opt/homebrew/bin/
+fish_add_path /usr/local/bin/ /opt/homebrew/bin/ /usr/local/go/bin
 
 set -x EDITOR /usr/bin/env nvim
-set -x RIPGREP_CONFIG_PATH ~/.ripgreprc
+set -x GOPATH /usr/local/go
 set -x GPG_TTY (tty)
+set -x RIPGREP_CONFIG_PATH ~/.ripgreprc
 
 if status is-interactive
 and not set -q TMUX
@@ -13,7 +14,6 @@ end
 
 if status is-interactive
   eval (ssh-agent -c) >> /dev/null
-  ~/.rbenv/bin/rbenv init - fish | source
 end
 
 if test -d ~/.config/fish/conf.d
