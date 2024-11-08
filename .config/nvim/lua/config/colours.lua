@@ -1,9 +1,9 @@
-vim.cmd.colorscheme('vim')
+vim.cmd.colorscheme("vim")
 
 vim.api.nvim_set_hl(0, "Comment", { ctermfg = 200 })
 vim.api.nvim_set_hl(0, "DiffAdd", { ctermfg = 2, ctermbg = none })
 vim.api.nvim_set_hl(0, "DiffChange", { ctermfg = 12, ctermbg = none })
-vim.api.nvim_set_hl(0, "DiffDelete", { ctermfg = 9, ctermbg = none  })
+vim.api.nvim_set_hl(0, "DiffDelete", { ctermfg = 9, ctermbg = none })
 vim.api.nvim_set_hl(0, "Error", { bold = true, ctermfg = 255, ctermbg = 9 })
 vim.api.nvim_set_hl(0, "IncSearch", { underline = true, ctermfg = 255, ctermbg = 238 })
 vim.api.nvim_set_hl(0, "LineNr", { ctermfg = 242 })
@@ -16,8 +16,3 @@ vim.api.nvim_set_hl(0, "SpellCap", { bold = true, ctermfg = 255, ctermbg = 56 })
 vim.api.nvim_set_hl(0, "StatusLine", { ctermbg = none })
 vim.api.nvim_set_hl(0, "StatusLineNC", { ctermbg = none })
 vim.api.nvim_set_hl(0, "VertSplit", { ctermfg = 237, ctermbg = none })
-
--- Custom entries
-
-vim.api.nvim_set_hl(0, "BufferSelected", { bold = true })
-vim.api.nvim_set_hl(0, "BufferUnselected", { ctermfg = 20 })

@@ -42,8 +42,8 @@ return {
 					"buffers",
 					symbols = { alternate_file = "" },
 					buffers_color = {
-						active = "BufferSelected",
-						inactive = "BufferUnselected",
+						active = { fg = "#fffff" },
+						inactive = { fg = "#444444" },
 					},
 				},
 				{
