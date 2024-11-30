@@ -1,0 +1,10 @@
+vim.keymap.set("n", "<leader>L", '"xciw[<C-r>"]()<Esc>i')
+vim.keymap.set("n", "<leader>b", '"xciw**<C-r>"**<Esc>')
+vim.keymap.set("n", "<leader>i", '"xciw_<C-r>"_<Esc>')
+vim.keymap.set("n", "<leader>k", "di(c%[]<Esc>i")
+vim.keymap.set("n", "<leader>l", '"xciw[<C-r>"][]<Esc>i')
+
+vim.keymap.set("v", "<leader>L", '"xc[<C-r>"]()<Esc>i')
+vim.keymap.set("v", "<leader>b", '"xc**<C-r>"**<Esc>')
+vim.keymap.set("v", "<leader>i", '"xc_<C-r>"_<Esc>')
+vim.keymap.set("v", "<leader>l", '"xc[<C-r>"][]<Esc>i')

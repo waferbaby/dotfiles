@@ -1,0 +1,56 @@
+[alias]
+  co = checkout
+  st = status
+  ci = commit
+  root = !pwd -P
+
+[core]
+  editor = /usr/bin/env nvim
+  excludesfile = ~/.gitignore_global
+  pager = less -r
+
+[commit]
+  verbose = true
+
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[init]
+  defaultBranch = main
+
+[user]
+  name = Daniel Bogan
+  email = d@waferbaby.com
+  signingkey = 648B78A1
+
+[pull]
+  rebase = true
+
+[push]
+  default = simple
+  autosetupremote = true
+
+[includeIf "gitdir:~/Development/work/"]
+  path = ~/.gitconfig-work
+[diff]
+  compactionHeuristic = true
+[fetch]
+  prune = true
