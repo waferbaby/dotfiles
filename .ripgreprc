@@ -1,0 +1,2 @@
+--glob=!.git/*
+--smart-case
