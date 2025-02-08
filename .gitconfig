@@ -1,0 +1,9 @@
+[user]
+	email = d@waferbaby.com
+	name = Daniel Bogan
+	signingkey = /home/d/.ssh/git_ed25519.pub
+[gpg]
+	format = ssh
+[alias]
+	st = status
+	ci = commit
