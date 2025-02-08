@@ -1,6 +1,6 @@
 set fish_greeting
 
-fish_add_path ~/.rbenv/shims /usr/local/bin/ /opt/homebrew/bin/
+fish_add_path ~/.local/bin /usr/local/bin/ /opt/homebrew/bin/
 
 set -x EDITOR /usr/bin/env nvim
 set -x RIPGREP_CONFIG_PATH ~/.ripgreprc
@@ -18,6 +18,7 @@ end
 
 if status is-interactive
   eval (ssh-agent -c) >> /dev/null
+  ~/.local/bin/mise activate fish | source
 end
 
 if test -d ~/.config/fish/conf.d
