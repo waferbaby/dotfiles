@@ -7,5 +7,6 @@
 [alias]
 	st = status
 	ci = commit
+	co = checkout
 [commit]
 	gpgsign = true
