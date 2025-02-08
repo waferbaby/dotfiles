@@ -7,3 +7,5 @@
 [alias]
 	st = status
 	ci = commit
+[commit]
+	gpgsign = true
