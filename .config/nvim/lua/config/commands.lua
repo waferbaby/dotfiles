@@ -1,5 +1,5 @@
 vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = "ruby",
+  pattern = "*",
   callback = function()
     vim.lsp.buf.format({ async = true })
   end
@@ -9,13 +9,6 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = "markdown",
   callback = function()
     vim.opt_local.number = false
-  end,
-})
-
-vim.api.nvim_create_autocmd("FileType", {
-  pattern = "ruby",
-  callback = function()
-    vim.b.autoformat = true
   end,
 })
 
