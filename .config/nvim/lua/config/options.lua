@@ -1,3 +1,5 @@
+vim.lsp.enable('ruby')
+
 vim.g.loaded_netrw = true
 vim.g.loaded_netrwPlugin = true
 vim.g.loaded_node_provider = 0
