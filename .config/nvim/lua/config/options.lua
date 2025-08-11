@@ -31,5 +31,3 @@ vim.opt.softtabstop = 2
 vim.opt.tabstop = 2
 vim.opt.termguicolors = true
 vim.opt.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
-
-vim.diagnostic.config({ virtual_lines = true })
