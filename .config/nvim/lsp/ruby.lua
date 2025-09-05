@@ -1,7 +1,7 @@
 return {
   vim.lsp.config('ruby', {
     root_markers = { '.git' },
-    cmd = { 'standardrb', '--lsp' },
+    cmd = { 'ruby-lsp' },
     filetypes = { 'ruby', 'eruby' },
   })
 }
