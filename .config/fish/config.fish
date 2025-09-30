@@ -18,7 +18,7 @@ end
 
 if status is-interactive
   eval (ssh-agent -c) >> /dev/null
-  ~/.local/bin/mise activate fish | source
+  mise activate fish | source
 end
 
 if test -d ~/.config/fish/conf.d
