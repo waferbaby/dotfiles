@@ -1,0 +1,55 @@
+spawn-sh-at-startup "/usr/lib/polkit-kde-authentication-agent-1 &"
+spawn-sh-at-startup "swww-daemon"
+spawn-sh-at-startup "waybar"
+
+prefer-no-csd
+
+input {
+  keyboard {
+    xkb {
+      layout "us"
+      options "caps:swapescape"
+    }
+  }
+
+  touchpad {
+    tap
+    natural-scroll
+  }
+}
+
+output "DP-1" {
+  mode "2560x1440@359.979"
+  scale 1
+}
+
+layout {
+  gaps 0;
+}
+
+binds {
+  Mod+Return                          { spawn-sh "ghostty"; }
+  Mod+Q                               { close-window; }
+
+  XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
+  XF86AudioLowerVolume                allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
+  XF86AudioMute                       allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+  XF86AudioMicMute                    allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+}
+
+window-rule {
+  open-maximized true;
+}
+
+environment {
+  DISPLAY ":1"
+  ELECTRON_OZONE_PLATFORM_HINT "auto"
+  QT_QPA_PLATFORM "wayland"
+  QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
+  XDG_SESSION_TYPE "wayland"
+  XDG_CURRENT_DESKTOP "niri"
+}
+
+hotkey-overlay {
+  skip-at-startup;
+}
