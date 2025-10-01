@@ -5,6 +5,8 @@ spawn-sh-at-startup "waybar"
 prefer-no-csd
 
 input {
+  mod-key "Alt"
+
   keyboard {
     xkb {
       layout "us"
@@ -29,6 +31,7 @@ layout {
 
 binds {
   Mod+Return                          { spawn-sh "ghostty"; }
+  Mod+Tab                             { focus-column-right-or-first; }
   Mod+Q                               { close-window; }
 
   XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
