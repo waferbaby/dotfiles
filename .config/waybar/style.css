@@ -1,0 +1,26 @@
+* {
+  font-size: 14px;
+  min-height: 0;
+  border: 0;
+  color: #ccc;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+box.modules-left {
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+label.module {
+  margin: 10px 4px;
+  padding: 5px;
+  border: solid 1px #888;
+  border-radius: 8px;
+}
+
+#clock {
+  margin-right: 10px;
+}
