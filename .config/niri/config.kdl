@@ -1,6 +1,9 @@
 spawn-sh-at-startup "/usr/lib/polkit-kde-authentication-agent-1 &"
 spawn-sh-at-startup "swww-daemon"
 spawn-sh-at-startup "waybar"
+spawn-sh-at-startup "swayidle -w timeout 120 swaylock -f"
+spawn-sh-at-startup "swayidle before-sleep swaylock -f"
+spawn-sh-at-startup "ghostty"
 
 prefer-no-csd
 
@@ -10,7 +13,7 @@ input {
   keyboard {
     xkb {
       layout "us"
-      options "caps:swapescape"
+      options "caps:swapescape,ctrl:swap_alt_l,ctrl:swap_alt_r"
     }
   }
 
@@ -26,18 +29,22 @@ output "DP-1" {
 }
 
 layout {
-  gaps 0;
+  gaps 20;
+  focus-ring { width 1; }
 }
 
 binds {
-  Mod+Return                          { spawn-sh "ghostty"; }
-  Mod+Tab                             { focus-column-right-or-first; }
   Mod+Q                               { close-window; }
+  Mod+Return                          { spawn-sh "ghostty"; }
+  Mod+Space                           { spawn-sh "fuzzel"; }
+  Mod+Shift+L                         { spawn-sh "swaylock"; }
+  Mod+Tab                             { focus-column-right-or-first; }
+  Print                               { screenshot-screen write-to-disk=false; }
 
-  XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
   XF86AudioLowerVolume                allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
-  XF86AudioMute                       allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
   XF86AudioMicMute                    allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+  XF86AudioMute                       allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+  XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
 }
 
 window-rule {
@@ -55,4 +62,8 @@ environment {
 
 hotkey-overlay {
   skip-at-startup;
+}
+
+switch-events {
+  lid-close { spawn "swaylock"; }
 }
