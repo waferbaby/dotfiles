@@ -3,6 +3,7 @@ spawn-sh-at-startup "swww-daemon"
 spawn-sh-at-startup "waybar"
 spawn-sh-at-startup "swayidle -w timeout 120 swaylock -f"
 spawn-sh-at-startup "swayidle before-sleep swaylock -f"
+spawn-sh-at-startup "firefox"
 spawn-sh-at-startup "ghostty"
 
 prefer-no-csd
@@ -37,6 +38,7 @@ binds {
   Mod+Q                               { close-window; }
   Mod+Return                          { spawn-sh "ghostty"; }
   Mod+Space                           { spawn-sh "fuzzel"; }
+  Mod+Shift+E                         { spawn-sh "BEMOJI_PICKER_CMD='fuzzel -d' bemoji"; }
   Mod+Shift+L                         { spawn-sh "swaylock"; }
   Mod+Tab                             { focus-column-right-or-first; }
   Print                               { screenshot-screen write-to-disk=false; }
