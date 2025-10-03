@@ -20,6 +20,6 @@ label.module {
   padding: 5px;
 }
 
-#clock {
+label#custom-wlogout.module {
   margin-right: 10px;
 }

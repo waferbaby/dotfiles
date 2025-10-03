@@ -11,16 +11,15 @@
   ],
 
   "modules-right": [
-    "wireplumbe",
+    "wireplumber",
     "network",
     "battery",
-    "clock"
+    "clock",
+    "custom/wlogout"
   ],
 
   "wireplumber": {
-    "format": "{volume}% {icon}",
-    "format-muted": "",
-    "on-click": "helvum",
+    "format": "{icon} {volume}%",
     "format-icons": ["", "", ""],
     "tooltip": false
   },
@@ -44,5 +43,10 @@
   "clock": {
     "interval": 60,
     "format": "{:%B %d / %I:%M}"
+  },
+
+  "custom/wlogout": {
+    "format": "⏻",
+    "on-click": "wlogout"
   }
 }
