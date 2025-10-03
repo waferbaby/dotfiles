@@ -1,48 +1,48 @@
 {
-    "layer": "top",
-    "margin-top": 0,
-    "margin-bottom": 0,
-    "margin-left": 0,
-    "margin-right": 0,
-    "spacing": 0,
+  "layer": "top",
+  "margin-top": 0,
+  "margin-bottom": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+  "spacing": 0,
 
-    "modules-left": [
-        "niri/window"
-    ],
+  "modules-left": [
+    "niri/window"
+  ],
 
-    "modules-right": [
-        "pulseaudio",
-        "network",
-        "battery",
-        "clock"
-    ],
+  "modules-right": [
+    "wireplumbe",
+    "network",
+    "battery",
+    "clock"
+  ],
 
-    "pulseaudio": {
-      "format": "{icon} {volume}%",
-      "format-muted": "",
-      "format-icons": {
-        "default": ["", ""]
-      },
-      "scroll-step": 1
+  "wireplumber": {
+    "format": "{volume}% {icon}",
+    "format-muted": "",
+    "on-click": "helvum",
+    "format-icons": ["", "", ""],
+    "tooltip": false
+  },
+
+  "network": {
+    "format-wifi": "",
+    "format-ethernet": "",
+    "format-disconnected": "⚠",
+    "tooltip": false
+  },
+
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
     },
+    "format": "{icon} {capacity}%",
+    "format-icons": ["", "", "", "", ""]
+  },
 
-    "network": {
-        "format-wifi": "",
-        "format-ethernet": "",
-        "format-disconnected": "⚠",
-    },
-
-    "battery": {
-      "states": {
-        "warning": 30,
-        "critical": 15
-      },
-      "format": "{icon} {capacity}% ({time})",
-      "format-icons": ["", "", "", "", ""]
-    },
-
-    "clock": {
-      "interval": 60,
-      "format": "{:%B %d / %I:%M}",
-    }
+  "clock": {
+    "interval": 60,
+    "format": "{:%B %d / %I:%M}"
+  }
 }

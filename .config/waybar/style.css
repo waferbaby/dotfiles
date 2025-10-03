@@ -1,8 +1,9 @@
 * {
-  font-size: 14px;
-  min-height: 0;
   border: 0;
   color: #ccc;
+  font-family: "Fira Sans";
+  font-size: 17px;
+  min-height: 0;
 }
 
 window#waybar {
@@ -17,8 +18,6 @@ box.modules-left {
 label.module {
   margin: 10px 4px;
   padding: 5px;
-  border: solid 1px #888;
-  border-radius: 8px;
 }
 
 #clock {
