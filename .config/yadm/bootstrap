@@ -1,0 +1,4 @@
+#!/bin/sh
+
+sudo pacman -S yay
+yay -S fuzzel bemoji neovim wl-clipboard tmux fish gtklock mise
