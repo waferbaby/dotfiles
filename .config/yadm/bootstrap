@@ -1,4 +1,19 @@
 #!/bin/sh
 
-sudo pacman -S yay
-yay -S fuzzel bemoji neovim wl-clipboard tmux fish gtklock mise
+yadm remote set-url origin "git@github.com:waferbaby/dotfiles.git"
+
+declare -a software
+
+software=(neovim tmux fish mise)
+os=$(uname -s)
+
+if [ "$os" = "Darwin" ]; then
+  installer="brew install"
+elif [ "$os" = "Linux" ]; then
+  sudo pacman -S yay
+  software=(${software[@]} fuzzel bemoji wl-clipboard gtklock swayidle)
+  installer="yay -S"
+fi
+
+echo ${software[@]}
+eval $installer ${software[@]}
