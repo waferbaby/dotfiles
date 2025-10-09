@@ -1,5 +1,5 @@
 spawn-sh-at-startup "/usr/lib/polkit-kde-authentication-agent-1 &"
-spawn-sh-at-startup "firefox"
+spawn-sh-at-startup "ghostty"
 spawn-sh-at-startup "librewolf"
 
 prefer-no-csd
