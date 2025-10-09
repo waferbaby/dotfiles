@@ -41,12 +41,12 @@ binds {
   Mod+Shift+E                         { spawn-sh "BEMOJI_PICKER_CMD='fuzzel -d' bemoji"; }
   Mod+Shift+L                         { spawn-sh "gtklock"; }
   Mod+Tab                             { focus-column-right-or-first; }
+
   Print                               { screenshot-screen write-to-disk=false; }
 
-  XF86AudioLowerVolume                allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
+  XF86AudioLowerVolume                allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%-"; }
   XF86AudioMicMute                    allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
-  XF86AudioMute                       allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
-  XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
+  XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%+ -l 1.0"; }
   XF86MonBrightnessDown               allow-when-locked=true { spawn-sh "brightnessctl s 5%-"; }
   XF86MonBrightnessUp                 allow-when-locked=true { spawn-sh "brightnessctl s 5%+"; }
 
