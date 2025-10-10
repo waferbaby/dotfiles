@@ -4,5 +4,5 @@ After=graphical-session.target
 Requisite=graphical-session.target
 
 [Service]
-ExecStart=/usr/bin/swayidle -w timeout 300 'gtklock' timeout 600 'niri msg action power-off-monitors' before-sleep 'gtklock'
+ExecStart=/usr/bin/swayidle -w timeout 300 'gtklock' before-sleep 'gtklock'
 Restart=on-failure
