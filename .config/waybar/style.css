@@ -2,7 +2,7 @@
   border: 0;
   color: #ccc;
   font-family: "Fira Sans";
-  font-size: 17px;
+  font-size: 16px;
   min-height: 0;
 }
 
@@ -23,13 +23,11 @@ label.module {
 label#battery.critical {
   background: transparent;
   color: #ff2200;
-  font-weight: bold;
 }
 
 label#battery.warning {
   background: transparent;
   color: #ff6600;
-  font-weight: bold;
 }
 
 label#custom-wlogout.module {
