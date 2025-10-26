@@ -1,3 +1,9 @@
+!.ssh/*.pub
 .cache
+.gnupg
 .local
-.librewolf
+.npm
+.offlineimap
+.pyicloud
+.ssh
+mail
