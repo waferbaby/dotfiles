@@ -2,4 +2,4 @@ copy-on-select = true
 fullscreen = true
 keybind = global:cmd+backquote=toggle_quick_terminal
 link-url = true
-theme = Cyberpunk
+theme = Synthwave Everything
