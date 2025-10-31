@@ -1,4 +1,6 @@
 function gb
+  cd $(git rev-parse --show-toplevel)
+
   if ! is_git_directory
     return
   end
