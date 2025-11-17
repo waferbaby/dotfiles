@@ -10,10 +10,11 @@ vim.keymap.set("n", "<leader>j", "vipJ")
 
 -- Telescope
 vim.keymap.set("n", "<leader>g", function()
-	require("snacks").picker.git_status()
+  require("telescope.builtin").git_status({})
 end)
+
 vim.keymap.set("n", "<leader>t", function()
-	require("snacks").picker.smart()
+	require("telescope.builtin").find_files({})
 end)
 
 -- Navigator
