@@ -39,12 +39,9 @@ return {
 					end,
 				},
 				{
-					"buffers",
-					symbols = { alternate_file = "" },
-					buffers_color = {
-						active = { fg = "#fffff" },
-						inactive = { fg = "#444444" },
-					},
+					"filename",
+          padding = 0,
+          path = 3,
 				},
 				{
 					"filetype",
