@@ -32,6 +32,12 @@ vim.keymap.set("n", "<C-Up>", function()
 	require("Navigator").up()
 end)
 
+-- VGit
+
+vim.keymap.set("n", "<leader><leader>", function()
+	require("vgit").hunk_down()
+end)
+
 -- Gitsigns
 
 vim.keymap.set("n", "gb", function()
