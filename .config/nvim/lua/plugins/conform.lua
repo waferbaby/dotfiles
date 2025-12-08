@@ -4,7 +4,8 @@ return {
   cmd = { "ConformInfo" },
   opts = {
     formatters_by_ft = {
-      ruby = { 'standardrb' },
+      ruby = { 'rubocop' },
+      javascript = { 'eslint' },
     },
     default_format_opts = {
       lsp_format = "fallback",
