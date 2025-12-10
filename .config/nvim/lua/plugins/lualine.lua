@@ -5,11 +5,10 @@ return {
       icons_enabled = false,
       section_separators = "",
       component_separators = "",
-      always_show_tabline = true,
       theme = {
         normal = {
           a = "String",
-          b = "StatusLine",
+          b = "Statement",
           c = "StatusLine",
           x = "StatusLine",
           y = "StatusLine",
@@ -38,27 +37,9 @@ return {
           fmt = function(str)
             return str == "" or str .. " >"
           end,
-        },
-        {
-          "filename",
-          padding = 0,
-          path = 3,
-        },
-        {
-          "filetype",
-          color = "Identifier",
-          fmt = function(str)
-            return str == "" or "(" .. str .. ")"
-          end,
-        },
+        }
       },
-      lualine_c = {},
-      lualine_x = { "lsp_status" },
-      lualine_y = { "progress" },
-      lualine_z = { "location" },
-    },
-    tabline = {
-      lualine_a = {
+      lualine_c = {
         {
           'buffers',
           show_modified_status = false,
@@ -66,7 +47,18 @@ return {
             alternate_file = '',
           },
         }
-      }
-    }
+      },
+      lualine_x = {
+        {
+          "filetype",
+          color = "Identifier",
+          fmt = function(str)
+            return str == "" or "(" .. str .. ")"
+          end,
+        }
+      },
+      lualine_y = { "lsp_status", "progress" },
+      lualine_z = { "location" },
+    },
   },
 }
