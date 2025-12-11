@@ -11,9 +11,11 @@ if [ "$os" = "Darwin" ]; then
   installer="brew install"
 elif [ "$os" = "Linux" ]; then
   sudo pacman -S yay
-  software=(${software[@]} fuzzel bemoji wl-clipboard gtklock swayidle)
   installer="yay -S"
 fi
 
 echo ${software[@]}
 eval $installer ${software[@]}
+
+yadm decrypt
+yadm alt
