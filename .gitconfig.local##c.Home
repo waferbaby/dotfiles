@@ -1,0 +1,4 @@
+[user]
+	email = d@waferbaby.com
+	name = Daniel Bogan
+	signingkey = ~/.ssh/git.pub
