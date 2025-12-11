@@ -1,4 +1,2 @@
-.ssh/git
-.ssh/github
-.ssh/git_work
-.ssh/github_work
+.ssh/git##c.Home
+.ssh/github##c.Home
