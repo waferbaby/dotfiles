@@ -2,7 +2,6 @@ return {
   "nvim-lualine/lualine.nvim",
   opts = {
     options = {
-      icons_enabled = false,
       section_separators = "",
       component_separators = "",
       theme = {
@@ -43,6 +42,9 @@ return {
         {
           'buffers',
           show_modified_status = false,
+          buffers_color = {
+            inactive = { fg = '#888888' },
+          },
           symbols = {
             alternate_file = '',
           },
