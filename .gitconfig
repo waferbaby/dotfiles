@@ -1,7 +1,3 @@
-[user]
-	email = d@waferbaby.com
-	name = Daniel Bogan
-	signingkey = ~/.ssh/git_ed25519.pub
 [gpg]
 	format = ssh
 [alias]
@@ -13,4 +9,6 @@
 [init]
 	defaultBranch = main
 [push]
-	autoSetupRemote = true
+  autoSetupRemote = true
+[include]
+  path = .gitconfig.local
