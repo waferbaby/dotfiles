@@ -1,2 +1,4 @@
 .ssh/git##c.Home
 .ssh/github##c.Home
+.ssh/git##c.Work
+.ssh/github##c.Work
