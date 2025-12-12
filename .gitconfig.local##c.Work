@@ -1,4 +1,4 @@
 [user]
 	email = daniel.bogan@getmosh.com
 	name = Daniel Bogan
-	signingkey = ~/.ssh/git.pub
+	signingkey = ~/.ssh/git.pub##c.Work
