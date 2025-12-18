@@ -4,6 +4,7 @@ return {
   cmd = { "ConformInfo" },
   opts = {
     formatters_by_ft = {
+      lua = { 'stylua' },
       ruby = { 'rubocop' },
       javascript = { 'eslint' },
     },
