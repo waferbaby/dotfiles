@@ -2,3 +2,4 @@
 .ssh/github##c.Home
 .ssh/git##c.Work
 .ssh/github##c.Work
+.ssh/forgejo*
